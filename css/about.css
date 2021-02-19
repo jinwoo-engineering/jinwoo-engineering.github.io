@@ -1,0 +1,55 @@
+html, body, p, div, span, blockquote, pre, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, th, td, form, fieldset, legend, input, textarea, button, select, section, article, header, footer, main, nav, figure {
+  margin: 0;
+  padding: 0;
+}
+
+img, fieldset, button, input {
+  border: 0 none;
+}
+
+img, input, select, textarea {
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: #fff;
+}
+
+.gnb {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+.gnb .brand {
+  font-size: 1.5rem;
+}
+.gnb .nav {
+  margin-left: auto;
+}
+.gnb .nav-list {
+  display: flex;
+  align-items: center;
+}
+.gnb .nav-list .__link {
+  display: block;
+  padding: 10px;
+  color: #333;
+}
+
+/*# sourceMappingURL=about.css.map */

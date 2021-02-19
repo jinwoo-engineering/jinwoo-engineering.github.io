@@ -1,0 +1,35 @@
+html {
+    height: 100%;
+}
+body {
+    height: 100%;
+    background-color: #fff;
+}
+
+.root{
+}
+
+.gnb{
+	display: flex;
+	align-items: center;
+	width: 90%;
+	margin: 0 auto;
+
+	.brand{
+		font-size: 1.5rem;
+	}
+	.nav{
+		margin-left: auto;
+	}
+	.nav-list{
+		display: flex;
+		align-items: center;
+		&-item{
+		}
+		.__link{
+			display: block;
+			padding: 10px;
+			color: #333;
+		}
+	}
+}
