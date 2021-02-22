@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html, body, p, div, span, blockquote, pre, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, th, td, form, fieldset, legend, input, textarea, button, select, section, article, header, footer, main, nav, figure {
   margin: 0;
   padding: 0;
@@ -21,6 +22,10 @@ ul, ol {
   list-style: none;
 }
 
+body {
+  font-family: "Malgun Gothic", "맑은 고딕", dotum, "돋움", sans-serif;
+}
+
 html {
   height: 100%;
 }
@@ -33,11 +38,10 @@ body {
 .gnb {
   display: flex;
   align-items: center;
-  width: 90%;
-  margin: 0 auto;
 }
 .gnb .brand {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 .gnb .nav {
   margin-left: auto;
@@ -46,10 +50,64 @@ body {
   display: flex;
   align-items: center;
 }
-.gnb .nav-list .__link {
+.gnb .__link {
   display: block;
   padding: 10px;
   color: #333;
+}
+.gnb .__link:hover {
+  color: #000;
+}
+
+.footer {
+  display: flex;
+  padding: 30px;
+  background: #2d323d;
+  line-height: 1.5;
+  font-size: 0.8rem;
+  color: #828282;
+}
+.footer .cell2 {
+  margin-left: auto;
+}
+.footer .email a {
+  color: #828282;
+}
+
+.gnbFix {
+  display: none;
+}
+
+.header {
+  padding: 0 1.8rem;
+  background: #a9eae8;
+}
+.header .titles {
+  margin-top: 1rem;
+  text-align: center;
+}
+.header .__title {
+  font-weight: 400;
+}
+.header .__text {
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.main {
+  padding: 1.8rem;
+}
+.main .__title {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 300;
+}
+.main .__texts {
+  line-height: 1.8;
+  font-size: 1.2rem;
+  font-weight: 200;
 }
 
 /*# sourceMappingURL=about.css.map */

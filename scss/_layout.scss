@@ -4,19 +4,19 @@ html {
 body {
     height: 100%;
     background-color: #fff;
+
 }
 
 .root{
+
 }
 
 .gnb{
 	display: flex;
 	align-items: center;
-	width: 90%;
-	margin: 0 auto;
-
 	.brand{
-		font-size: 1.5rem;
+		font-size: 1.2rem;
+		font-weight: 500;
 	}
 	.nav{
 		margin-left: auto;
@@ -24,12 +24,39 @@ body {
 	.nav-list{
 		display: flex;
 		align-items: center;
-		&-item{
+	}
+	&-item{
 		}
-		.__link{
-			display: block;
-			padding: 10px;
-			color: #333;
+	.__link{
+		display: block;
+		padding: 10px;
+		color: #333;
+		&:hover{
+			color: #000;
 		}
 	}
 }
+
+
+.footer{
+	display: flex;
+	padding: 30px;
+	background: #2d323d;
+	line-height: 1.5;
+	font-size: 0.8rem;
+	color: #828282;
+	.cell1{
+
+	}
+	.cell2{
+		margin-left: auto;
+	}
+	.email a{
+		color: #828282;
+	}
+}
+
+.gnbFix{
+	display: none;
+}
+
