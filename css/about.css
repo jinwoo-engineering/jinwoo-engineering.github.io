@@ -59,6 +59,45 @@ body {
   color: #000;
 }
 
+.header {
+  padding: 0 1.8rem;
+  background: #a9eae8;
+}
+.header .titles {
+  margin-top: 1rem;
+  text-align: center;
+}
+.header .__title {
+  font-weight: 400;
+}
+.header .__text {
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  font-size: 0.8rem;
+  color: #888;
+}
+.header .__text a {
+  color: #888;
+}
+
+.contents {
+  padding: 1.8rem;
+}
+
+.section {
+  margin-bottom: 5rem;
+  font-size: 1.3rem;
+  color: #828282;
+  font-weight: 300;
+  line-height: 1.8;
+}
+.section .__title {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #060221;
+}
+
 .footer {
   display: flex;
   padding: 30px;
@@ -78,36 +117,37 @@ body {
   display: none;
 }
 
-.header {
-  padding: 0 1.8rem;
-  background: #a9eae8;
-}
-.header .titles {
-  margin-top: 1rem;
-  text-align: center;
-}
-.header .__title {
-  font-weight: 400;
-}
-.header .__text {
-  padding-top: 0.6rem;
-  padding-bottom: 0.6rem;
-  font-size: 0.8rem;
-  color: #888;
+.section .__focus {
+  font-weight: 300;
+  color: #060221;
 }
 
-.main {
-  padding: 1.8rem;
+.summary dl {
+  display: flex;
+  border-bottom: 1px dashed #eee;
 }
-.main .__title {
-  margin-bottom: 1rem;
-  font-size: 2rem;
+.summary dt {
+  width: 200px;
+}
+.summary dd {
+  margin-left: 6px;
   font-weight: 300;
+  color: #060221;
 }
-.main .__texts {
-  line-height: 1.8;
-  font-size: 1.2rem;
-  font-weight: 200;
+.summary a {
+  color: #060221;
+}
+
+.business-rule h6 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #060221;
+}
+.business-rule li {
+  margin-bottom: 2rem;
+}
+.business-rule p:nth-child(2) {
+  color: #1ba21b;
 }
 
 /*# sourceMappingURL=about.css.map */
