@@ -6,19 +6,19 @@
   "scripts": {
     "start": "npm run js:watch & npm run sass:watch",
     "js:watch": "npx babel src/js --watch --out-dir lib/js",
-    "sass:watch": "sass --watch src/scss:lib/css",
+    "sass:watch": "sass --watch --style=compressed src/scss:lib/css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jinwoo-engineering/web.git"
+    "url": "https://github.com/jinwoo-engineering/jinwoo-engineering.github.io.git"
   },
   "author": "thegicode",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/jinwoo-engineering/web/issues"
+    "url": "https://github.com/jinwoo-engineering/jinwoo-engineering.github.io/issues"
   },
-  "homepage": "https://github.com/jinwoo-engineering/web#readme",
+  "homepage": "http://jinwoo-engineering.github.io",
   "dependencies": {
     "@babel/cli": "^7.13.0",
     "@babel/core": "^7.13.1",
