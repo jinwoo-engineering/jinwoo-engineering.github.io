@@ -61,7 +61,6 @@ body {
 
 .header {
   padding: 0 1.8rem;
-  background: #a9eae8;
 }
 .header .titles {
   margin-top: 1rem;
@@ -117,7 +116,11 @@ body {
   display: none;
 }
 
-.section .__focus {
+.header {
+  background: #a9eae8;
+}
+
+.introduce .__focus {
   font-weight: 300;
   color: #060221;
 }
@@ -146,7 +149,7 @@ body {
 .business-rule li {
   margin-bottom: 2rem;
 }
-.business-rule p:nth-child(2) {
+.business-rule .__focus {
   color: #1ba21b;
 }
 

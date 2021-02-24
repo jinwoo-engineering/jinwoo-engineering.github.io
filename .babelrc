@@ -1,0 +1,14 @@
+{
+    "presets": [
+       "@babel/preset-env", 
+       ["minify", {builtIns: false}]
+    ], 
+    "plugins": [
+        "babel-plugin-transform-remove-debugger", 
+        "babel-plugin-transform-remove-undefined", 
+        "babel-plugin-transform-inline-consecutive-adds", 
+        ["@babel/plugin-transform-object-assign"],
+        ["@babel/plugin-transform-template-literals",{"loose": true}]
+    ], 
+    "comments": false
+}

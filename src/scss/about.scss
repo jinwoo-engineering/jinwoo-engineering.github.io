@@ -5,13 +5,16 @@
 @import "_layout.scss";
 
 
-.section{
+.header{
+	background: #a9eae8;
+	// background: linear-gradient(65deg,rgb(29,225,209) 0%,rgba(172,196,195,.084) 100%);
+}
+
+.introduce{
 	.__focus{
 		@include section-text-focus;
 	}
 }
-
-.introduce{}
 
 .summary{
 	dl{
@@ -38,7 +41,7 @@
 	li{
 		margin-bottom: 2rem;
 	}
-	p:nth-child(2){
+	.__focus{
 		color: #1ba21b;
 	}
 }
