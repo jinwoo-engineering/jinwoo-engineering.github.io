@@ -48,9 +48,7 @@ dom.querySelectorAll('[data-component]')
   .forEach(node => {
     const key = node.dataset.component
     node.className = key
-    if (key === 'gnbFix') {
-      node.classList.add('gnb')
-    }
+    key === 'gnbFix' && node.classList.add('gnb')
     node.innerHTML = template[key]()
   })
 
