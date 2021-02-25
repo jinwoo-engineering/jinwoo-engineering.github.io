@@ -8,6 +8,7 @@ body {
 }
 
 .root{
+	background: #fbfbfb;
 
 }
 
@@ -38,6 +39,8 @@ body {
 }
 
 .header{
+	height: 120px;
+	box-sizing: border-box;
 	padding: 0 1.8rem;
 	.titles{
 		margin-top: 1rem;
@@ -93,6 +96,16 @@ body {
 }
 
 .gnbFix{
-	display: none;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 1rem 1.8rem;
+	background: #fff;
+	opacity: 1;
+	transition: top 0.2s ease-in-out;
+	&[data-hidden=true]{
+		top: -100%;
+	}
 }
 

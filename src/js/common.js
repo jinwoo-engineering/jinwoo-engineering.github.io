@@ -1,5 +1,9 @@
 'use strict'
 
+// variable
+const dom = document
+
+// render
 const template = {
   gnb: () => {
     return `
@@ -39,7 +43,7 @@ const template = {
   }
 }
 
-document.querySelectorAll('[data-component]')
+dom.querySelectorAll('[data-component]')
   .forEach(node => {
     const key = node.dataset.component
     node.className = key
@@ -48,3 +52,17 @@ document.querySelectorAll('[data-component]')
     }
     node.innerHTML = template[key]()
   })
+
+// Navigation
+const handleGnbFix = () => {
+  const gnbFix = dom.querySelector('[data-component="gnbFix"]')
+  if (!gnbFix) return
+  window.addEventListener('scroll', () => {
+    let isHidden = true
+    if (window.scrollY > 120) {
+      isHidden = false
+    }
+    gnbFix.dataset.hidden = isHidden
+  })
+}
+handleGnbFix()
