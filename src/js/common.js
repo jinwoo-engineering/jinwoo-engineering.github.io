@@ -57,8 +57,7 @@ dom.querySelectorAll('[data-component]')
 // Navigation
 const handleGnbFix = () => {
   const gnbFix = dom.getElementById('gnbFix')
-  if (!gnbFix) return
-  win.addEventListener('scroll', () => {
+  gnbFix && win.addEventListener('scroll', () => {
     let isHidden = true
     win.scrollY > 120 && (isHidden = false)
     gnbFix.dataset.hidden = isHidden
