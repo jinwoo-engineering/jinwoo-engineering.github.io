@@ -25,6 +25,7 @@
     "@babel/core": "^7.13.1",
     "@babel/plugin-transform-object-assign": "^7.12.13",
     "@babel/plugin-transform-template-literals": "^7.13.0",
+    "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.13.5",
     "babel-plugin-transform-inline-consecutive-adds": "^0.4.3",
     "babel-plugin-transform-remove-debugger": "^6.9.4",
@@ -33,6 +34,7 @@
     "sass": "^1.32.8"
   },
   "devDependencies": {
+    "babel-plugin-remove-template-literals-whitespace": "^1.0.3",
     "eslint": "^7.20.0",
     "eslint-config-standard": "^16.0.2",
     "eslint-plugin-import": "^2.22.1",
