@@ -1,6 +1,7 @@
 'use strict'
 
 // variable
+const win = window
 const dom = document
 
 // render
@@ -55,11 +56,11 @@ dom.querySelectorAll('[data-component]')
 
 // Navigation
 const handleGnbFix = () => {
-  const gnbFix = dom.querySelector('[data-component="gnbFix"]')
+  const gnbFix = dom.getElementById('gnbFix')
   if (!gnbFix) return
-  window.addEventListener('scroll', () => {
+  win.addEventListener('scroll', () => {
     let isHidden = true
-    window.scrollY > 120 && (isHidden = false)
+    win.scrollY > 120 && (isHidden = false)
     gnbFix.dataset.hidden = isHidden
   })
 }
