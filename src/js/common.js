@@ -59,9 +59,7 @@ const handleGnbFix = () => {
   if (!gnbFix) return
   window.addEventListener('scroll', () => {
     let isHidden = true
-    if (window.scrollY > 120) {
-      isHidden = false
-    }
+    window.scrollY > 120 && (isHidden = false)
     gnbFix.dataset.hidden = isHidden
   })
 }
