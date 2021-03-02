@@ -27,7 +27,11 @@ const template = {
                         <a href="../html/sales.html" class="__link">매출계획</a>
                     </li>
                 </ul>
-            </nav>`
+            </nav>
+            <button type="button" class="toggle-button">
+                <span class="__bar"></span><span class="__bar"></span><span class="__bar"></span>
+            </button>
+            `
     },
     footer: () => {
         return `
@@ -44,20 +48,26 @@ const template = {
     }
 }
 
+const className = {
+    gnb : 'gnb',
+    footer: 'footer',
+    gnbFix: 'gnb gnbFix'
+}
+
 dom.querySelectorAll('[data-component]')
     .forEach(node => {
         const key = node.dataset.component
-        node.className = key
-        key === 'gnbFix' && node.classList.add('gnb')
+        node.className = className[key]
         node.innerHTML = template[key]()
     })
 
 // Navigation
 const handleGnbFix = () => {
-    const gnbFix = dom.getElementById('gnbFix')
+    const gnbFix = dom.getElementById('gnbFix'),
+        header = dom.getElementById('header');
     gnbFix && win.addEventListener('scroll', () => {
         let isHidden = true
-        win.scrollY > 120 && (isHidden = false)
+        win.scrollY > header.offsetHeight && (isHidden = false)
         gnbFix.dataset.hidden = isHidden
     })
 }

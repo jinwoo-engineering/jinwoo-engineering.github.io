@@ -22,7 +22,8 @@
 		border-bottom: 1px dashed #eee;
 	}
 	dt{
-		width: 200px;
+		flex: none;
+		width: 30%;
 	}
 	dd{
 		margin-left: 6px;
@@ -45,3 +46,26 @@
 		color: #1ba21b;
 	}
 }
+
+@media screen and (max-width: 500px) {
+	.root{
+	}
+	.header{
+		// padding: 0;
+	}
+	.gnb .brand{
+		// font-size: 1rem;
+	}
+	.gnb .nav{
+		display: none;
+	}
+	.gnb .nav-list{
+		// flex-direction: column;
+		// background-color: #fff;
+	}
+	.gnb .toggle-button{
+		display: block;
+	}
+}
+
+

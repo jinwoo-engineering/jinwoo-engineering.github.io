@@ -24,3 +24,8 @@
 	@include section-text-focus-color;
 }
 
+@mixin button-default{
+	background-color: transparent;
+	outline: none;
+}
+

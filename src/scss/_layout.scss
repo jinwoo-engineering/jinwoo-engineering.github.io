@@ -15,6 +15,8 @@ body {
 .gnb{
 	display: flex;
 	align-items: center;
+
+	position: relative;
 	.brand{
 		font-size: 1.2rem;
 		font-weight: 500;
@@ -26,9 +28,7 @@ body {
 		display: flex;
 		align-items: center;
 	}
-	&-item{
-	}
-	.__link{
+	.nav-item .__link{
 		display: block;
 		padding: 10px;
 		color: #333;
@@ -36,22 +36,38 @@ body {
 			color: #000;
 		}
 	}
+	.toggle-button{
+		display: none;
+		position: absolute;
+		top: -7px; right: 0;
+		padding: 5px;
+		@include button-default;
+		.__bar{
+			display: block;
+			width: 23px;
+			height: 2px;
+			border-radius: 5px;
+			margin: 4px 0;
+			background: #333;
+			&:nth-child(2){
+				width: 80%;
+			}
+		}
+	}
 }
 
 .header{
-	height: 120px;
 	box-sizing: border-box;
-	padding: 0 1.8rem;
+	padding: 1rem;
 	.titles{
-		margin-top: 1rem;
+		padding: 0.5rem 0 ;
 		text-align: center;
 	}
 	.__title{
 		font-weight: 400;
 	}
 	.__text{
-		padding-top: 0.6rem;
-		padding-bottom: 0.6rem;
+		padding-top: 0.5rem;
 		font-size: 0.8rem;
 		color: #888;
 		a{
