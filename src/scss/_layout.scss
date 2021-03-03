@@ -23,6 +23,9 @@ body {
 	}
 	.nav{
 		margin-left: auto;
+		&[data-hidden="false"]{
+			display: block;
+		}
 	}
 	.nav-list{
 		display: flex;
@@ -39,7 +42,7 @@ body {
 	.toggle-button{
 		display: none;
 		position: absolute;
-		top: -7px; right: 0;
+		top: -4px; right: 0;
 		padding: 5px;
 		@include button-default;
 		.__bar{
@@ -51,6 +54,25 @@ body {
 			background: #333;
 			&:nth-child(2){
 				width: 80%;
+			}
+		}
+
+		&[data-expanded="true"]{
+			position: absolute; top: 40px; right: 15px;
+			transform: rotate(45deg);
+			.__bar{
+				transform-origin: 0 0;
+				position: absolute; top: 0; left: 0;
+				margin: 0;
+			}
+			.__bar:nth-child(2){
+				display: none;
+			}
+			.__bar:first-child{
+				top: -12px; left: -11px;
+			}
+			.__bar:last-child{
+				transform: rotate(-90deg);
 			}
 		}
 	}

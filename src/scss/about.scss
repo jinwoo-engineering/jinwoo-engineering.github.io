@@ -51,20 +51,50 @@
 	.root{
 	}
 	.header{
-		// padding: 0;
+		padding: 0;
+		background-color: #fff;
+	}
+	.header .titles{
+		background-color: #a9eae8;
+	}
+	.gnb{
+		display: block;
 	}
 	.gnb .brand{
-		// font-size: 1rem;
+		padding: 1rem 1.5rem;
 	}
 	.gnb .nav{
 		display: none;
+		position: relative;
+		width: 100%;
 	}
+
 	.gnb .nav-list{
-		// flex-direction: column;
-		// background-color: #fff;
+		align-items: stretch;
+	}
+	.gnb .nav-item{
+		border-top: solid 1px #ddd;
+		.__link{
+			padding: 1rem 1.5rem;
+			color: #000;
+		}
 	}
 	.gnb .toggle-button{
 		display: block;
+		margin-right: 0.5rem;
+		padding: 1rem;
+	}
+	.gnb .nav-list{
+		flex-direction: column;
+	}
+	.gnbFix{
+		padding: 0;
+		.nav{
+			box-shadow: 0px 10px 10px rgb(0 0 0 / 3%);
+		}
+	}
+	.contents{
+		padding: 1.5rem;
 	}
 }
 

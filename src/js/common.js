@@ -9,7 +9,12 @@ const template = {
     gnb: () => {
         return `
             <h1 class="brand">진우엔지니어링</h1>
-            <nav class="nav">
+            <button type="button" class="toggle-button" data-expanded="false" onclick="handleNav(this)">
+                <span class="__bar"></span>
+                <span class="__bar"></span>
+                <span class="__bar"></span>
+            </button>
+            <nav data-id="gnbNav" class="nav">
                 <ul class="nav-list">
                     <li class="nav-item">
                         <a href="../html/home.html" class="__link">HOME</a>
@@ -28,9 +33,6 @@ const template = {
                     </li>
                 </ul>
             </nav>
-            <button type="button" class="toggle-button">
-                <span class="__bar"></span><span class="__bar"></span><span class="__bar"></span>
-            </button>
             `
     },
     footer: () => {
@@ -49,7 +51,7 @@ const template = {
 }
 
 const className = {
-    gnb : 'gnb',
+    gnb: 'gnb',
     footer: 'footer',
     gnbFix: 'gnb gnbFix'
 }
@@ -61,10 +63,9 @@ dom.querySelectorAll('[data-component]')
         node.innerHTML = template[key]()
     })
 
-// Navigation
 const handleGnbFix = () => {
-    const gnbFix = dom.getElementById('gnbFix'),
-        header = dom.getElementById('header');
+    const gnbFix = dom.getElementById('gnbFix')
+    const header = dom.getElementById('header')
     gnbFix && win.addEventListener('scroll', () => {
         let isHidden = true
         win.scrollY > header.offsetHeight && (isHidden = false)
@@ -72,3 +73,22 @@ const handleGnbFix = () => {
     })
 }
 handleGnbFix()
+
+/*const handleNavs = isExpanded => {
+    const navs = [...dom.querySelectorAll('[data-id=gnbNav]')]
+    navs.map( nav => {
+        const button = nav.previousElementSibling;
+        button.setAttribute('data-expanded', !isExpanded)
+        nav.setAttribute('data-hidden', isExpanded)
+    })
+}*/
+
+const handleNav = (button) => {
+    const isExpanded = button.getAttribute('data-expanded') !== 'false'
+    // handleNavs(isExpanded);
+    const gnbNav = button.parentElement.getElementsByTagName('nav')[0]
+    button.setAttribute('data-expanded', !isExpanded)
+    gnbNav.setAttribute('data-hidden', isExpanded)
+}
+
+
