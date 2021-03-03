@@ -9,7 +9,7 @@ const template = {
     gnb: () => {
         return `
             <h1 class="brand">진우엔지니어링</h1>
-            <button type="button" class="toggle-button" data-expanded="false" onclick="handleNav(this)">
+            <button type="button" class="toggle-button" data-expanded=false>
                 <span class="__bar"></span>
                 <span class="__bar"></span>
                 <span class="__bar"></span>
@@ -61,6 +61,7 @@ dom.querySelectorAll('[data-component]')
         const key = node.dataset.component
         node.className = className[key]
         node.innerHTML = template[key]()
+        node.setAttribute('data-expanded', false)
     })
 
 const handleGnbFix = () => {
@@ -74,21 +75,14 @@ const handleGnbFix = () => {
 }
 handleGnbFix()
 
-/*const handleNavs = isExpanded => {
-    const navs = [...dom.querySelectorAll('[data-id=gnbNav]')]
-    navs.map( nav => {
-        const button = nav.previousElementSibling;
-        button.setAttribute('data-expanded', !isExpanded)
-        nav.setAttribute('data-hidden', isExpanded)
-    })
-}*/
-
-const handleNav = (button) => {
-    const isExpanded = button.getAttribute('data-expanded') !== 'false'
-    // handleNavs(isExpanded);
-    const gnbNav = button.parentElement.getElementsByTagName('nav')[0]
-    button.setAttribute('data-expanded', !isExpanded)
-    gnbNav.setAttribute('data-hidden', isExpanded)
+const handeNavs = () => {
+    [...dom.getElementsByClassName('gnb')]
+        .forEach(gnb => {
+            gnb.getElementsByClassName('toggle-button')[0]
+                .addEventListener('click', () => {
+                    const isExpanded = gnb.getAttribute('data-expanded')
+                    gnb.setAttribute('data-expanded', isExpanded === 'false')
+                }, false)
+        })
 }
-
-
+handeNavs()
