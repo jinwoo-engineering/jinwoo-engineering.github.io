@@ -60,8 +60,8 @@ dom.querySelectorAll('[data-component]')
     .forEach(node => {
         const key = node.dataset.component
         node.className = className[key]
-        node.innerHTML = template[key]()
-        node.setAttribute('data-expanded', false)
+        node.innerHTML = template[key]();
+        (key === 'gnb' || key === 'gnbFix') && node.setAttribute('data-expanded', false)
     })
 
 const handleGnbFix = () => {
