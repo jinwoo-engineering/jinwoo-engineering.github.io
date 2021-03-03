@@ -9,7 +9,7 @@ const template = {
     gnb: () => {
         return `
             <h1 class="brand">진우엔지니어링</h1>
-            <button type="button" class="toggle-button" data-expanded=false>
+            <button type="button" class="toggle-button">
                 <span class="__bar"></span>
                 <span class="__bar"></span>
                 <span class="__bar"></span>
