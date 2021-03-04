@@ -8,7 +8,7 @@
     .gnb{
         display: block;
         .brand{
-            padding: 1rem 1.5rem;
+            padding: 1rem;
         }
         .toggle-button{
             display: block;
@@ -79,6 +79,13 @@
         }
     }
     .contents{
-        padding: 1.5rem;
+        padding: 1rem;
+    }
+    .footer{
+        flex-direction: column;
+        .cell2{
+            margin-left: 0;
+            text-align: initial;
+        }
     }
 }

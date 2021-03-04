@@ -54,6 +54,18 @@
 			background-color: #a9eae8;
 		}
 	}
+	.summary{
+		dl{
+			flex-direction: column;
+			padding: 10px 0;
+		}
+		dt{
+			font-size: 1rem;
+		}
+		dd{
+			margin-left: 0;
+		}
+	}
 }
 
 
