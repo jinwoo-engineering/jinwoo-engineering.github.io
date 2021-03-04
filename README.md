@@ -6,11 +6,15 @@
 ## 개발환경
 	- Node
 	- VanilaJS
+    - babel compile
 	- scss : https://sass-lang.com/
-	- html : w3 validator
+    - eslint
 
 ## 반응형
 	- 모바일
 	- pc
+
+## Crowss Borwsing
+    - 하위 버전 css 추가요
 
 

@@ -1,0 +1,84 @@
+@media screen and (max-width: 500px) {
+    .root{
+    }
+    .header{
+        padding: 0;
+    }
+    
+    .gnb{
+        display: block;
+        .brand{
+            padding: 1rem 1.5rem;
+        }
+        .toggle-button{
+            display: block;
+            position: absolute;
+            top: -4px; right: 0;
+            margin-right: 0.5rem;
+            padding: 1rem;
+            @include button-default;
+            .__bar{
+                display: block;
+                width: 23px;
+                height: 2px;
+                border-radius: 5px;
+                margin: 4px 0;
+                background: #333;
+                &:nth-child(2){
+                    width: 80%;
+                }
+            }
+        }
+        .nav{
+            display: none;
+            position: relative;
+            width: 100%;
+        }
+        .nav-list{
+            align-items: stretch;
+        }
+        .nav-item{
+            border-top: solid 1px #ddd;
+            .__link{
+                padding: 1rem 1.5rem;
+                color: #000;
+            }
+        }
+        .nav-list{
+            flex-direction: column;
+        }
+        &[data-expanded=true]{
+            .toggle-button{
+                position: absolute; top: 40px; right: 15px;
+                transform: rotate(45deg);
+                .__bar{
+                    transform-origin: 0 0;
+                    position: absolute; top: 0; left: 0;
+                    margin: 0;
+                }
+                .__bar:nth-child(2){
+                    display: none;
+                }
+                .__bar:first-child{
+                    top: -12px; left: -11px;
+                }
+                .__bar:last-child{
+                    transform: rotate(-90deg);
+                }
+            }
+            .nav{
+                display: block;
+            }
+        }
+    }
+
+    .gnbFix{
+        padding: 0;
+        .nav{
+            box-shadow: 0px 10px 10px rgb(0 0 0 / 3%);
+        }
+    }
+    .contents{
+        padding: 1.5rem;
+    }
+}
