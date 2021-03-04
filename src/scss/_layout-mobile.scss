@@ -14,7 +14,6 @@
             display: block;
             position: absolute;
             top: -4px; right: 0;
-            margin-right: 0.5rem;
             padding: 1rem;
             @include button-default;
             .__bar{
@@ -83,6 +82,7 @@
     }
     .footer{
         flex-direction: column;
+        padding: 1rem;
         .cell2{
             margin-left: 0;
             text-align: initial;

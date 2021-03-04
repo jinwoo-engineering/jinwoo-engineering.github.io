@@ -1,5 +1,4 @@
 
-// section
 @mixin section-text-size{
 	font-size: 1.3rem;
 }
@@ -18,7 +17,6 @@
 	@include section-text-weight;
 	line-height: 1.8;
 }
-
 @mixin section-text-focus{
 	@include section-text-weight;
 	@include section-text-focus-color;
@@ -28,4 +26,3 @@
 	background-color: transparent;
 	outline: none;
 }
-

@@ -15,6 +15,8 @@
 	- pc
 
 ## Crowss Borwsing
-    - 하위 버전 css 추가요
+    - create contents padding pc/mobile common variable 
+    - html minify
+    - 타 브라우저 확인요
 
 
