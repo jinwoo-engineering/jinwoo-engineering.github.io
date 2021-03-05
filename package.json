@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run babel:watch & npm run sass:watch",
-    "babel:watch": "babel src/js --watch --out-dir lib/js",
-    "sass:watch": "sass --watch --style=compressed src/scss:lib/css",
+    "babel:watch": "babel src/js --watch --out-dir public/js",
+    "sass:watch": "sass --watch --style=compressed src/scss:public/css",
     "eslint": "eslint -c .eslintrc.json src/js/*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/jinwoo-engineering/jinwoo-engineering.github.io/issues"
   },
-  "homepage": "http://jinwoo-engineering.github.io",
+  "homepage": "https://jinwoo-engineering.github.io/",
   "dependencies": {
     "@babel/cli": "^7.13.0",
     "@babel/core": "^7.13.1",

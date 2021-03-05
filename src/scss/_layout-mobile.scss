@@ -1,3 +1,5 @@
+$content-space-mobile: 1rem;
+
 @media screen and (max-width: 500px) {
     .root{
     }
@@ -8,13 +10,13 @@
     .gnb{
         display: block;
         .brand{
-            padding: 1rem;
+            padding: $content-space-mobile;
         }
         .toggle-button{
             display: block;
             position: absolute;
             top: -4px; right: 0;
-            padding: 1rem;
+            padding: $content-space-mobile;
             @include button-default;
             .__bar{
                 display: block;
@@ -48,7 +50,7 @@
         }
         &[data-expanded=true]{
             .toggle-button{
-                position: absolute; top: 40px; right: 15px;
+                position: absolute; top: 38px; right: 20px;
                 transform: rotate(45deg);
                 .__bar{
                     transform-origin: 0 0;
@@ -78,11 +80,11 @@
         }
     }
     .contents{
-        padding: 1rem;
+        padding: $content-space-mobile;
     }
     .footer{
         flex-direction: column;
-        padding: 1rem;
+        padding: $content-space-mobile;
         .cell2{
             margin-left: 0;
             text-align: initial;
