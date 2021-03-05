@@ -1,11 +1,13 @@
 # jinwoo-engineering.github.io
 
-# 설치
+## 설치
 * npm install
 
-# 실행
+
+## 실행
 * npm start : babel & sass - watch & complie
 * npm run eslint
+
 
 ## 개발환경
 * Node
@@ -13,13 +15,17 @@
 * babel compile
 * scss : https://sass-lang.com/
 * eslint : standard
+* html-minifier: npx html-minifier --help 
 
-## url 
+
+## URL 
 https://jinwoo-engineering.github.io/
+
 
 ## 반응형
 * 모바일
 * pc
+
 
 ## Crowss Borwsing
 * html minify, html file folder 이름 변경
