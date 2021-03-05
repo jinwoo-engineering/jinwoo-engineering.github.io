@@ -5,7 +5,7 @@
 
 # 실행
     - npm start : babel & sass - watch & complie
-    - eslint : npm run eslint
+    - npm run eslint
 
 ## 개발환경
 	- Node
@@ -14,7 +14,8 @@
 	- scss : https://sass-lang.com/
     - eslint : standard
 
-## url : https://jinwoo-engineering.github.io/
+## url 
+    - https://jinwoo-engineering.github.io/
 
 ## 반응형
 	- 모바일
