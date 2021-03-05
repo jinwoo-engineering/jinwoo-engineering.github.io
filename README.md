@@ -5,17 +5,18 @@
 
 
 ## 실행
-* npm start : babel & sass - watch & complie
+* npm start : js(babel) & css(sass) & html
 * npm run eslint
 
 
 ## 개발환경
 * Node
 * VanilaJS
-* babel compile
-* scss : https://sass-lang.com/
-* eslint : standard
-* html-minifier: npx html-minifier --help 
+* eslint : js standard
+* babel : js compile
+* scss : https://sass-lang.com/, css prefixer
+* html-minifier
+* nodemon : html watch
 
 
 ## URL 
@@ -27,10 +28,10 @@ https://jinwoo-engineering.github.io/
 * pc
 
 
-## Crowss Borwsing
+## TODO list
 * 타 브라우저 확인요
 * css 크로스 브라우징 컴파일
-* ~~html minify, html file folder 이름 변경~~
-* ~~create contents padding pc/mobile common variable~~
+* ~~[2021.03.05] html minify, html file folder 이름 변경~~
+* ~~[2021.03.05] create contents padding pc/mobile common variable~~
 
 
