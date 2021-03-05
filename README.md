@@ -28,9 +28,9 @@ https://jinwoo-engineering.github.io/
 
 
 ## Crowss Borwsing
-* html minify, html file folder 이름 변경
 * 타 브라우저 확인요
 * css 크로스 브라우징 컴파일
+* ~~html minify, html file folder 이름 변경~~
 * ~~create contents padding pc/mobile common variable~~
 
 
