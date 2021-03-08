@@ -47,9 +47,10 @@
 	}
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: $mobile-width),
+screen and (max-height: $mobile-height) and (orientation: landscape) {
 	.header{
-		background: #fff;
+        background: #fff;
 		.titles{
 			background-color: #a9eae8;
 		}

@@ -1,8 +1,10 @@
 $content-space-mobile: 1rem;
+$mobile-width: 767px;
+$mobile-height: 500px;
 
-@media screen and (max-width: 500px) {
-    .root{
-    }
+@media screen and (max-width: $mobile-width),
+screen and (max-height: $mobile-height) and (orientation: landscape) {
+    .root{}
     .header{
         padding: 0;
     }
