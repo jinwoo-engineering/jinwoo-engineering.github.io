@@ -18,11 +18,12 @@ body {
 
 	position: relative;
 	.brand{
+		// position: absolute;
 		font-size: 1.2rem;
 		font-weight: 500;
 	}
 	.nav{
-		margin-left: auto;
+		margin-left: auto; margin-right: auto;
 		&[data-hidden="false"]{
 			display: block;
 		}
@@ -33,7 +34,7 @@ body {
 	}
 	.nav-item .__link{
 		display: block;
-		padding: 10px;
+		padding: 10px 20px;
 		color: #333;
 		&:hover{
 			color: #000;
@@ -108,13 +109,12 @@ body {
 	padding: 1rem $content-space;
 	background: #fff;
 	opacity: 1;
-	transition: top 0.2s ease-in-out;
+	transition: top 0.5s ease-in-out;
 	&[data-hidden=true]{
 		top: -100%;
 	}
 }
 
 @import "_layout-mobile.scss";
-@import "_layout-lower.scss";
 
 

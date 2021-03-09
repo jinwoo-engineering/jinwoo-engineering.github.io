@@ -1,9 +1,11 @@
 $content-space-mobile: 1rem;
+// $mobile-width: 500px; 
 $mobile-width: 767px;
+$mobile-width2: 850px;
 $mobile-height: 500px;
 
 @media screen and (max-width: $mobile-width),
-screen and (max-height: $mobile-height) and (orientation: landscape) {
+screen and (max-width: $mobile-width2) and (max-height: $mobile-height) and (orientation: landscape) {
     .root{}
     .header{
         padding: 0;
@@ -12,14 +14,19 @@ screen and (max-height: $mobile-height) and (orientation: landscape) {
     .gnb{
         display: block;
         .brand{
-            padding: $content-space-mobile;
+            padding: 1.5rem $content-space-mobile;
         }
         .toggle-button{
+            $duration: 0.2s;
             display: block;
             position: absolute;
-            top: -4px; right: 0;
+            top: 5px; right: 0;
             padding: $content-space-mobile;
             @include button-default;
+            .bars{
+                display: block;
+                transition: transform $duration;
+            }
             .__bar{
                 display: block;
                 width: 23px;
@@ -30,12 +37,14 @@ screen and (max-height: $mobile-height) and (orientation: landscape) {
                 &:nth-child(2){
                     width: 80%;
                 }
+                transition: transform $duration;
             }
         }
         .nav{
             display: none;
             position: relative;
             width: 100%;
+            background-color: #fff;
         }
         .nav-list{
             align-items: stretch;
@@ -52,21 +61,19 @@ screen and (max-height: $mobile-height) and (orientation: landscape) {
         }
         &[data-expanded=true]{
             .toggle-button{
-                position: absolute; top: 38px; right: 20px;
-                transform: rotate(45deg);
+                .bars{
+                    transform: rotate(45deg);
+                    position: relative; top: 3px; right: 2px;
+                }
                 .__bar{
                     transform-origin: 0 0;
-                    position: absolute; top: 0; left: 0;
-                    margin: 0;
-                }
-                .__bar:nth-child(2){
-                    display: none;
-                }
-                .__bar:first-child{
-                    top: -12px; left: -11px;
                 }
                 .__bar:last-child{
                     transform: rotate(-90deg);
+                    position: relative; top: 6px; left: 10px;
+                }
+                .__bar:nth-child(2){
+                    display: none;
                 }
             }
             .nav{
