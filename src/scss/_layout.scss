@@ -18,9 +18,11 @@ body {
 
 	position: relative;
 	.brand{
-		// position: absolute;
 		font-size: 1.2rem;
 		font-weight: 500;
+	}
+	.toggle-button{
+		display: none;
 	}
 	.nav{
 		margin-left: auto; margin-right: auto;
@@ -32,18 +34,16 @@ body {
 		display: flex;
 		align-items: center;
 	}
-	.nav-item .__link{
-		display: block;
-		padding: 10px 20px;
-		color: #333;
-		&:hover{
-			color: #000;
+	.nav-item {
+		.__link{
+			display: block;
+			padding: 10px 20px;
+			color: #333;
+			&:hover{
+				color: #000;
+			}
 		}
 	}
-	.toggle-button{
-		display: none;
-	}
-	
 }
 
 .header{
@@ -52,15 +52,16 @@ body {
 	.titles{
 		padding: 0.5rem 0 ;
 		text-align: center;
+		.__title{
+			font-weight: 400;
+		}
 	}
-	.__title{
-		font-weight: 400;
-	}
-	.__text{
+	.menu{
 		padding-top: 0.5rem;
 		font-size: 0.8rem;
 		color: #888;
-		a{
+		.__link{
+			padding: 0.3rem;
 			color: #888;
 		}
 	}
@@ -89,10 +90,10 @@ body {
 	line-height: 1.5;
 	font-size: 0.8rem;
 	color: #828282;
-	.cell1{
+	.info{
 
 	}
-	.cell2{
+	.copyright{
 		margin-left: auto;
 		text-align: right;
 	}

@@ -1,10 +1,8 @@
 'use strict'
 
-// variable
 const win = window
 const dom = document
 
-// render
 const template = {
     gnb: () => {
         return `
@@ -16,7 +14,7 @@ const template = {
                     <span class="__bar"></span>
                 </span>
             </button>
-            <nav data-id="gnbNav" class="nav">
+            <nav class="nav">
                 <ul class="nav-list">
                     <li class="nav-item">
                         <a href="../html/home.html" class="__link">HOME</a>
@@ -39,13 +37,13 @@ const template = {
     },
     footer: () => {
         return `
-            <div class="cell1">
+            <div class="info">
                 <p class="address">경기도 동두천시 삼육사로 548번길 84 (상패동)</p>
                 <p class="tel">TEL : 031-858-2430</p>
                 <p class="tel">FAX : 031-858-2429</p>
                 <p class="email">EMAIL : <a href="mailto:jinwoo43705@naver.com">jinwoo43705@naver.com</a></p>
             </div>
-            <div class="cell2">Copyright © JINWOO ENGINEERING. All rights reserved.</div>`
+            <div class="copyright">Copyright © JINWOO ENGINEERING. All rights reserved.</div>`
     },
     gnbFix: () => {
         return template.gnb()
@@ -58,13 +56,15 @@ const className = {
     gnbFix: 'gnb gnbFix'
 }
 
-dom.querySelectorAll('[data-component]')
-    .forEach(node => {
-        const key = node.dataset.component
-        node.className = className[key]
-        node.innerHTML = template[key]();
-        (key === 'gnb' || key === 'gnbFix') && node.setAttribute('data-expanded', false)
-    })
+const makeTemplate = () => {
+    dom.querySelectorAll('[data-component]')
+        .forEach(cpnt => {
+            const key = cpnt.getAttribute('data-component')
+            cpnt.className = className[key]
+            cpnt.innerHTML = template[key]();
+            (key === 'gnb' || key === 'gnbFix') && cpnt.setAttribute('data-expanded', false)
+        })
+}
 
 const handleGnbFix = () => {
     const gnbFix = dom.getElementById('gnbFix')
@@ -75,7 +75,6 @@ const handleGnbFix = () => {
         gnbFix.dataset.hidden = isHidden
     })
 }
-handleGnbFix()
 
 const handeNavs = () => {
     [...dom.getElementsByClassName('gnb')]
@@ -87,4 +86,9 @@ const handeNavs = () => {
                 }, false)
         })
 }
+
+makeTemplate()
+
+handleGnbFix()
+
 handeNavs()
