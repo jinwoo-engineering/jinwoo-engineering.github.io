@@ -1,0 +1,1 @@
+'use strict';function Helpers(){console.log("Helpers")}Helpers.qs=function(a,b){return(b||document).querySelector(a)},Helpers.qsa=function(a,b){return(b||document).querySelectorAll(a)},!1===NodeList.prototype.hasOwnProperty("forEach")&&(console.log("NodeList.prototype.hasOwnProperty(forEach) :",NodeList.prototype.forEach),NodeList.prototype.forEach=Array.prototype.forEach);
