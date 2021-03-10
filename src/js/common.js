@@ -1,9 +1,6 @@
 'use strict'
 
-const win = window
-const dom = document
-
-if (win.NodeList && !NodeList.prototype.forEach) {
+if( NodeList.prototype.hasOwnProperty('forEach') === false ){
     NodeList.prototype.forEach = Array.prototype.forEach
 }
 
@@ -63,7 +60,8 @@ const className = {
 }
 
 const makeTemplate = () => {
-    dom.querySelectorAll('[data-component]')
+    // document.querySelector('[data-component="gnb"]').innerHTML = template.gnb();
+    document.querySelectorAll('[data-component]')
         .forEach(cpnt => {
             const key = cpnt.getAttribute('data-component')
             cpnt.className = className[key]
@@ -73,19 +71,26 @@ const makeTemplate = () => {
 }
 
 const handleGnbFix = () => {
-    const gnbFix = dom.getElementById('gnbFix')
-    const header = dom.getElementById('header')
-    gnbFix && win.addEventListener('scroll', () => {
-        let isHidden = true
-        win.pageYOffset > header.offsetHeight && (isHidden = false)
-        gnbFix.setAttribute('data-hidden', isHidden)
-    })
+    const gnbFix = document.getElementById('gnbFix')
+    const header = document.getElementById('header')
+    if (gnbFix !== undefined) {
+        window.addEventListener('scroll', () => {
+            let isHidden = true
+            window.pageYOffset > header.offsetHeight && (isHidden = false)
+            gnbFix.setAttribute('data-hidden', isHidden)
+        })
+    }
+    // gnbFix && window.addEventListener('scroll', () => {
+    //     let isHidden = true
+    //     window.pageYOffset > header.offsetHeight && (isHidden = false)
+    //     gnbFix.setAttribute('data-hidden', isHidden)
+    // })
 }
 
 const handeNavs = () => {
-    [...dom.getElementsByClassName('gnb')]
+    document.querySelectorAll('.gnb')
         .forEach(gnb => {
-            gnb.getElementsByClassName('toggle-button')[0]
+            gnb.querySelector('.toggle-button')
                 .addEventListener('click', () => {
                     const isExpanded = gnb.getAttribute('data-expanded')
                     gnb.setAttribute('data-expanded', isExpanded === 'false')
