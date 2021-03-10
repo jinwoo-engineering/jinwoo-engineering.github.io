@@ -1,11 +1,11 @@
 'use strict'
 
-if (window.NodeList && !NodeList.prototype.forEach) {
-    NodeList.prototype.forEach = Array.prototype.forEach
-}
-
 const win = window
 const dom = document
+
+if (win.NodeList && !NodeList.prototype.forEach) {
+    NodeList.prototype.forEach = Array.prototype.forEach
+}
 
 const template = {
     gnb: () => {
@@ -52,7 +52,7 @@ const template = {
             </div>`
     },
     gnbFix: () => {
-        return template.gnb()
+        return `<div class="gnbFix-inner">${template.gnb()}</div>`
     }
 }
 
@@ -77,8 +77,8 @@ const handleGnbFix = () => {
     const header = dom.getElementById('header')
     gnbFix && win.addEventListener('scroll', () => {
         let isHidden = true
-        win.scrollY > header.offsetHeight && (isHidden = false)
-        gnbFix.dataset.hidden = isHidden
+        win.pageYOffset > header.offsetHeight && (isHidden = false)
+        gnbFix.setAttribute('data-hidden', isHidden)
     })
 }
 
