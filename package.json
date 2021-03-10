@@ -4,14 +4,14 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "npm run watch:js & npm run watch:css & npm run watch:html",
-    "watch:js": "npx babel src/js --watch --out-dir public/js",
-    "watch:html": "nodemon -e html -w ./src -x \"npm run minify:html\"",
+    "start": "npm run watch:html || npm run watch:css || npm run watch:js",
+    "watch:html": "npx nodemon -e html -w ./src -x \"npm run minify:html\"",
     "watch:css": "npx sass --watch --style=compressed src/scss:public/css",
+    "watch:js": "npx babel ./src/js --watch --out-dir ./public/js",
+    "minify:html": "npx html-minifier --file-ext html --input-dir ./src --output-dir ./public --collapse-whitespace --collapse-boolean-attributes --remove-comments --remove-empty-attributes  --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --remove-tag-whitespace --sort-attributes --sort-class-name --trim-custom-fragments --minify-css --minify-js",
     "prefixer:css": "npx postcss ./public/css/*.css --use autoprefixer -d ./public/css/",
     "build:css": "npx postcss ./public/css/*.css --use autoprefixer -d ./build/css/ --no-map --verbose",
-    "minify:html": "npx html-minifier --file-ext html --input-dir ./src --output-dir ./public --collapse-whitespace --collapse-boolean-attributes --remove-comments --remove-empty-attributes  --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --remove-tag-whitespace --sort-attributes --sort-class-name --trim-custom-fragments --minify-css --minify-js",
-    "eslint": "eslint -c .eslintrc.json src/js/*.js",
+    "eslint": "eslint -c .eslintrc.json ./src/js/*.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

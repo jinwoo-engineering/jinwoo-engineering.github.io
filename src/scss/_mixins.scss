@@ -1,28 +1,30 @@
-
-@mixin section-text-size{
-	font-size: 1.3rem;
+@mixin contents-wrap {
+  max-width: 1190px;
+  margin: 0 auto;
 }
-@mixin section-text-color{
-	color: #828282;
+@mixin section-text-size {
+  font-size: 1.3rem;
 }
-@mixin section-text-weight{
-	font-weight: 300;
+@mixin section-text-color {
+  color: #828282;
 }
-@mixin section-text-focus-color{
-	color: #060221;
+@mixin section-text-weight {
+  font-weight: 300;
 }
-@mixin section-text{
-	@include section-text-size;
-	@include section-text-color;
-	@include section-text-weight;
-	line-height: 1.8;
+@mixin section-text-focus-color {
+  color: #060221;
 }
-@mixin section-text-focus{
-	@include section-text-weight;
-	@include section-text-focus-color;
+@mixin section-text {
+  @include section-text-size;
+  @include section-text-color;
+  @include section-text-weight;
+  line-height: 1.8;
 }
-
-@mixin button-default{
-	background-color: transparent;
-	outline: none;
+@mixin section-text-focus {
+  @include section-text-weight;
+  @include section-text-focus-color;
+}
+@mixin button-default {
+  background-color: transparent;
+  outline: none;
 }
