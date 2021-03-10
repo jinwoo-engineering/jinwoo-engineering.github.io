@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "npm run watch:html || npm run watch:css || npm run watch:js",
+    "start": "npm run watch:html & npm run watch:css & npm run watch:js",
     "watch:html": "npx nodemon -e html -w ./src -x \"npm run minify:html\"",
     "watch:css": "npx sass --watch --style=compressed src/scss:public/css",
     "watch:js": "npx babel ./src/js --watch --out-dir ./public/js",
