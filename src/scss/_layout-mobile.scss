@@ -88,6 +88,9 @@ $mobile-height: 500px;
 
   .gnbFix {
     padding: 0;
+    &-inner {
+      display: block;
+    }
     .nav {
       box-shadow: 0px 10px 10px rgb(0 0 0 / 3%);
     }
