@@ -27,5 +27,3 @@ ClassController.prototype.handleNavs = function () {
 
 window.app = window.app || {}
 window.app.controller = new ClassController()
-window.app.controller.handleGnbFix()
-window.app.controller.handleNavs()

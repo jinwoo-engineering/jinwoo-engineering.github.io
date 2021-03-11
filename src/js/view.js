@@ -21,4 +21,3 @@ ClassView.prototype.show = function () {
 
 window.app = window.app || {}
 window.app.view = new ClassView()
-window.app.view.show()
