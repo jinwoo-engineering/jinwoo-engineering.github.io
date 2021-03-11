@@ -33,9 +33,10 @@ https://jinwoo-engineering.github.io/
 
 ## TODO list
 
-- Check browser
 - Add build
-- Add forEach babel
+- CSS tab size 수정
+- ~~[2021.03.11] Check browser~~
+- ~~[2021.03.11] Add forEach support~~
 - ~~[2021.03.10] css prefixer~~
 - ~~[2021.03.05] html minify, html file folder 이름 변경~~
 - ~~[2021.03.05] create contents padding pc/mobile common variable~~
