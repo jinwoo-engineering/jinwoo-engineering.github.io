@@ -1,1 +1,1 @@
-'use strict';function View(){console.log("View")}
+'use strict';function ClassView(){this.template=window.app.template,this.className={gnb:"gnb",footer:"footer",gnbFix:"gnb gnbFix"},this.cpnts=document.querySelectorAll("[data-component]")}ClassView.prototype.show=function(){var a=this;this.cpnts.forEach(function(b){var c=b.getAttribute("data-component");b.className=a.className[c],b.innerHTML=a.template[c](),("gnb"===c||"gnbFix"===c)&&b.setAttribute("data-expanded",!1)})},window.app=window.app||{},window.app.view=new ClassView,window.app.view.show();

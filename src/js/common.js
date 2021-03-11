@@ -1,6 +1,6 @@
 'use strict'
 
-if( NodeList.prototype.hasOwnProperty('forEach') === false ){
+if (NodeList.prototype.hasOwnProperty('forEach') === false) {
     NodeList.prototype.forEach = Array.prototype.forEach
 }
 

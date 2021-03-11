@@ -1,11 +1,10 @@
 'use strict'
 
-function Template(){
-	console.log('Template')
+function ClassTemplate () {
 }
 
-Template.gnb = function(){
-	return `
+ClassTemplate.prototype.gnb = function () {
+    return `
         <h1 class="brand">진우엔지니어링</h1>
         <button type="button" class="toggle-button">
             <span class="bars">
@@ -35,8 +34,8 @@ Template.gnb = function(){
         </nav>`
 }
 
-Template.footer = function(){
-	return `
+ClassTemplate.prototype.footer = function () {
+    return `
         <div class="footer-inner">
             <div class="info">
                 <p class="address">경기도 동두천시 삼육사로 548번길 84 (상패동)</p>
@@ -48,6 +47,9 @@ Template.footer = function(){
         </div>`
 }
 
-Template.gnbFix = function(){
-	return `<div class="gnbFix-inner">${Template.gnb()}</div>`
+ClassTemplate.prototype.gnbFix = function () {
+    return `<div class="gnbFix-inner">${ClassTemplate.prototype.gnb()}</div>`
 }
+
+window.app = window.app || {}
+window.app.template = new ClassTemplate()
