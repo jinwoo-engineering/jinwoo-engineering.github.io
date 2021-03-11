@@ -1,13 +1,13 @@
 'use strict'
 
-function ClassHelpers () {
+function Helpers () {
 }
 
-ClassHelpers.prototype.qs = function (selector, scope) {
+Helpers.prototype.qs = function (selector, scope) {
     return (scope || document).querySelector(selector)
 }
 
-ClassHelpers.prototype.qsa = function (selector, scope) {
+Helpers.prototype.qsa = function (selector, scope) {
     return (scope || document).querySelectorAll(selector)
 }
 
@@ -15,4 +15,4 @@ ClassHelpers.prototype.qsa = function (selector, scope) {
 NodeList.prototype.forEach = Array.prototype.forEach
 // }
 window.app = window.app || {}
-window.app.helpers = new ClassHelpers()
+window.app.Helpers = Helpers

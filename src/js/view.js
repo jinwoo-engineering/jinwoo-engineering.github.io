@@ -1,7 +1,7 @@
 'use strict'
 
-function ClassView () {
-    this.template = window.app.template
+function View (template) {
+    this.template = template
     this.className = {
         gnb: 'gnb',
         footer: 'footer',
@@ -10,14 +10,18 @@ function ClassView () {
     this.cpnts = document.querySelectorAll('[data-component]')
 }
 
-ClassView.prototype.show = function () {
+View.prototype.show = function () {
     this.cpnts.forEach(cpnt => {
         const key = cpnt.getAttribute('data-component')
         cpnt.className = this.className[key]
-        cpnt.innerHTML = this.template[key]();
-        (key === 'gnb' || key === 'gnbFix') && cpnt.setAttribute('data-expanded', false)
+        cpnt.innerHTML = this.template[key]()
+        if (key === 'gnb' || key === 'gnbFix') {
+            cpnt.setAttribute('data-expanded', false)
+        }
     })
 }
 
+
+
 window.app = window.app || {}
-window.app.view = new ClassView()
+window.app.View = View

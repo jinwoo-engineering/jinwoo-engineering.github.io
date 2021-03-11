@@ -1,9 +1,9 @@
 'use strict'
 
-function ClassTemplate () {
+function Template () {
 }
 
-ClassTemplate.prototype.gnb = function () {
+Template.prototype.gnb = function () {
     return `
         <h1 class="brand">진우엔지니어링</h1>
         <button type="button" class="toggle-button">
@@ -34,7 +34,7 @@ ClassTemplate.prototype.gnb = function () {
         </nav>`
 }
 
-ClassTemplate.prototype.footer = function () {
+Template.prototype.footer = function () {
     return `
         <div class="footer-inner">
             <div class="info">
@@ -47,9 +47,9 @@ ClassTemplate.prototype.footer = function () {
         </div>`
 }
 
-ClassTemplate.prototype.gnbFix = function () {
-    return `<div class="gnbFix-inner">${ClassTemplate.prototype.gnb()}</div>`
+Template.prototype.gnbFix = function () {
+    return `<div class="gnbFix-inner">${Template.prototype.gnb()}</div>`
 }
 
 window.app = window.app || {}
-window.app.template = new ClassTemplate()
+window.app.Template = Template
