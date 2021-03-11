@@ -18,6 +18,7 @@
 .summary {
   dl {
     display: flex;
+    padding: 10px 0;
     border-bottom: 1px dashed #eee;
   }
   dt {
@@ -35,7 +36,7 @@
 
 .business-rule {
   h6 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     @include section-text-focus;
   }
   li {
@@ -45,6 +46,37 @@
     color: #1ba21b;
   }
 }
+
+.map{
+    display: flex;
+    &-image{
+        flex: 1;
+        img{
+            width: 100%;
+            border: 1px solid #ddd;
+        }
+    }
+    &-detail{
+        flex: 1;
+        padding-left: 2rem;
+        h6{
+            font-size: 1.2rem;
+            @include section-text-focus;
+        }
+        dl{
+            display: flex;
+            margin-top: 1rem;
+        }
+        dt{
+            padding-right: 1.5rem;
+        }
+        dd{
+            flex: 1;
+            min-width: 80px;
+        }
+    }
+}
+
 
 @media screen and (max-width: $mobile-width),
   screen and (max-width: $mobile-width2) and (max-height: $mobile-height) and (orientation: landscape) {
@@ -66,4 +98,11 @@
       margin-left: 0;
     }
   }
+  .map{
+    display: block;
+    &-detail{
+        margin-top: 1rem;
+        padding-left: 0;
+    }
+}
 }

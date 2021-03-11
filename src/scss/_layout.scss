@@ -72,18 +72,21 @@ body {
 }
 
 .contents {
-  padding: $content-space;
+  padding: $content-space $content-space 3rem;
   &-inner {
     @include contents-wrap;
   }
 }
 
 .section {
-  margin-bottom: 5rem;
+  margin-top: 4rem;
   @include section-text;
+  &:first-child{
+    margin-top: 0;
+  }
   .__title {
     margin-bottom: 1rem;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 400;
     color: #060221;
   }
