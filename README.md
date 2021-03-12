@@ -34,7 +34,9 @@ https://jinwoo-engineering.github.io/
 ## TODO list
 
 - Add build
-- CSS tab size 수정
+- Server
+- media query variable?
+- ~~[2021.03.12] CSS tab size 수정~~
 - ~~[2021.03.11] Check browser~~
 - ~~[2021.03.11] Add forEach support~~
 - ~~[2021.03.10] css prefixer~~

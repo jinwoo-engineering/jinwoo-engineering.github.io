@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+@import "_reset.scss";
+@import "_mixins.scss";
+@import "_layout.scss";
+@import "_layout-mobile.scss";
+
+.customers{
+	display: flex;
+	flex-flow: row wrap;
+	margin-right: -2rem;
+	li{
+		box-sizing: border-box;
+		padding: 1rem 2rem 1rem 0;
+	}
+	.__title{
+		font-size: 1rem;
+		font-weight: 400;
+		color: #1ba21b;
+		border-bottom: solid 1px #1ba21b;
+	}
+	.address{
+		margin: 5px 0;
+		font-size: 13px;
+	}
+	.decscription{
+		color: #060221;
+	}
+}
+
+@media screen and (max-width: $mobile-width),
+  screen and (max-width: $mobile-width2) and (max-height: $mobile-height) and (orientation: landscape) {
+  	.customers{
+  		display: block;
+		margin-right: 0;
+		li{
+			padding-right: 0;
+		}
+  	}
+}

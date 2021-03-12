@@ -16,19 +16,19 @@ Template.prototype.gnb = function () {
         <nav class="nav">
             <ul class="nav-list">
                 <li class="nav-item">
-                    <a href="../home.html" class="__link">HOME</a>
+                    <a href="./home.html" class="__link">HOME</a>
                 </li>
                 <li class="nav-item">
-                    <a href="../about.html" class="__link">회사소개</a>
+                    <a href="./about.html" class="__link">회사소개</a>
                 </li>
                 <li class="nav-item">
-                    <a href="../status.html" class="__link">회사현황</a>
+                    <a href="./status.html" class="__link">회사현황</a>
                 </li>
                 <li class="nav-item">
-                    <a href="../business.html" class="__link">사업소개</a>
+                    <a href="./business.html" class="__link">사업소개</a>
                 </li>
                 <li class="nav-item">
-                    <a href="../sales.html" class="__link">매출계획</a>
+                    <a href="./sales.html" class="__link">매출계획</a>
                 </li>
             </ul>
         </nav>`
