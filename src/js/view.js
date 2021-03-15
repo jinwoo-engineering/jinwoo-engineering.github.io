@@ -36,10 +36,10 @@ View.prototype.handleGnbFix = function () {
 }
 
 View.prototype.handleNavs = function () {
-    const helpers = this.helpers
-    helpers.qsa('.gnb')
+    const __hp = this.helpers
+    __hp.qsa('.gnb')
         .forEach(gnb => {
-            helpers.qs('.toggle-button', gnb)
+            __hp.qs('.toggle-button', gnb)
                 .addEventListener('click', function () {
                     const __is = gnb.getAttribute('data-expanded')
                     gnb.setAttribute('data-expanded', __is === 'false')
