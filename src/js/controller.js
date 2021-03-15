@@ -6,8 +6,8 @@ function Controller (view) {
 
 Controller.prototype.init = function () {
     this.view.drawComponents()
-    this.view.onWindowScroll()
-    this.view.onToggleButtonClick()
+    this.view.handleWindowScroll()
+    this.view.handleToggleButtonClick()
 }
 
 window.app = window.app || {}

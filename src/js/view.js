@@ -24,7 +24,7 @@ View.prototype.drawComponents = function () {
     })
 }
 
-View.prototype.onWindowScroll = function () {
+View.prototype.handleWindowScroll = function () {
     if (!this.$gnbFix) return
     window.addEventListener('scroll', () => {
         let __is = true
@@ -35,7 +35,7 @@ View.prototype.onWindowScroll = function () {
     }, false)
 }
 
-View.prototype.onToggleButtonClick = function () {
+View.prototype.handleToggleButtonClick = function () {
     const __hp = this.helpers
     __hp.qsa('.gnb')
         .forEach(gnb => {
