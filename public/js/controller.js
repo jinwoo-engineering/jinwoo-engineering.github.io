@@ -1,1 +1,1 @@
-'use strict';function Controller(a){this.view=a}Controller.prototype.init=function(){this.view.showComponents(),this.view.handleGnbFix(),this.view.handleNavs()},window.app=window.app||{},window.app.Controller=Controller;
+'use strict';function Controller(a){this.view=a}Controller.prototype.init=function(){this.view.drawComponents(),this.view.onWindowScroll(),this.view.onToggleButtonClick()},window.app=window.app||{},window.app.Controller=Controller;

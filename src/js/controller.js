@@ -5,9 +5,9 @@ function Controller (view) {
 }
 
 Controller.prototype.init = function () {
-    this.view.showComponents()
-    this.view.handleGnbFix()
-    this.view.handleNavs()
+    this.view.drawComponents()
+    this.view.onWindowScroll()
+    this.view.onToggleButtonClick()
 }
 
 window.app = window.app || {}

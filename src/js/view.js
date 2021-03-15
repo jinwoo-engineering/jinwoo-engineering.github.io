@@ -8,7 +8,7 @@ function View (helpers, template) {
     this.$header = this.helpers.qs('#header')
 }
 
-View.prototype.showComponents = function () {
+View.prototype.drawComponents = function () {
     const __cn = {
         gnb: 'gnb',
         footer: 'footer',
@@ -24,7 +24,7 @@ View.prototype.showComponents = function () {
     })
 }
 
-View.prototype.handleGnbFix = function () {
+View.prototype.onWindowScroll = function () {
     if (!this.$gnbFix) return
     window.addEventListener('scroll', () => {
         let __is = true
@@ -35,7 +35,7 @@ View.prototype.handleGnbFix = function () {
     }, false)
 }
 
-View.prototype.handleNavs = function () {
+View.prototype.onToggleButtonClick = function () {
     const __hp = this.helpers
     __hp.qsa('.gnb')
         .forEach(gnb => {
