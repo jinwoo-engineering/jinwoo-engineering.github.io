@@ -1,24 +1,50 @@
 'use strict'
 
-function View (template) {
+function View (helpers, template) {
+    this.helpers = helpers
     this.template = template
-    this.className = {
+    this.cpnts = document.querySelectorAll('[data-component]')
+    this.$gnbFix = this.helpers.qs('#gnbFix')
+    this.$header = this.helpers.qs('#header')
+}
+
+View.prototype.showComponents = function () {
+    const __cn = {
         gnb: 'gnb',
         footer: 'footer',
         gnbFix: 'gnb gnbFix'
     }
-    this.cpnts = document.querySelectorAll('[data-component]')
-}
-
-View.prototype.show = function () {
     this.cpnts.forEach(cpnt => {
-        const key = cpnt.getAttribute('data-component')
-        cpnt.className = this.className[key]
-        cpnt.innerHTML = this.template[key]()
-        if (key === 'gnb' || key === 'gnbFix') {
+        const __key = cpnt.getAttribute('data-component')
+        cpnt.className = __cn[__key]
+        cpnt.innerHTML = this.template[__key]()
+        if (__key === 'gnb' || __key === 'gnbFix') {
             cpnt.setAttribute('data-expanded', false)
         }
     })
+}
+
+View.prototype.handleGnbFix = function () {
+    if (!this.$gnbFix) return
+    window.addEventListener('scroll', () => {
+        let __is = true
+        if (window.pageYOffset > this.$header.offsetHeight) {
+            __is = false
+        }
+        this.$gnbFix.setAttribute('data-hidden', __is)
+    }, false)
+}
+
+View.prototype.handleNavs = function () {
+    const helpers = this.helpers
+    helpers.qsa('.gnb')
+        .forEach(gnb => {
+            helpers.qs('.toggle-button', gnb)
+                .addEventListener('click', function () {
+                    const __is = gnb.getAttribute('data-expanded')
+                    gnb.setAttribute('data-expanded', __is === 'false')
+                }, false)
+        })
 }
 
 window.app = window.app || {}
