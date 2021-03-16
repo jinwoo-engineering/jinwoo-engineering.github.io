@@ -26,7 +26,7 @@ body {
 	}
 	.nav {
 		margin-left: auto;
-		margin-right: auto;
+		// margin-right: auto;
 		&[data-hidden="false"] {
 			display: block;
 		}
@@ -93,7 +93,8 @@ body {
 	}
 	&-title2 {
 		font-size: 1.2rem;
-		@include section-text-focus;
+		font-weight: 300;
+		color: #060221;
 	}
 }
 
@@ -127,6 +128,7 @@ body {
 	background: #fff;
 	opacity: 1;
 	transition: top 0.5s ease-in-out;
+	box-shadow: 0px 10px 10px rgb(0 0 0 / 3%);
 	&-inner {
 		display: flex;
 		align-items: center;

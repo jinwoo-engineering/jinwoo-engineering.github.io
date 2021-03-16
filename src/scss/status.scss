@@ -6,12 +6,19 @@
 @import "_layout-mobile.scss";
 
 .customers{
-	display: flex;
-	flex-flow: row wrap;
-	margin-right: -2rem;
+	ul{
+		display: flex;
+		flex-flow: row wrap;
+		margin-right: -2rem;
+		margin-bottom: 2rem;
+	}
 	li{
+		min-width: 50%;
 		box-sizing: border-box;
 		padding: 1rem 2rem 1rem 0;
+	}
+	.section-title2{
+		font-weight: 400;
 	}
 	.__title{
 		font-size: 1rem;
@@ -20,7 +27,8 @@
 		border-bottom: solid 1px #1ba21b;
 	}
 	.address{
-		margin: 5px 0;
+		margin: 13px 0 10px;
+		line-height: 1.5;
 		font-size: 13px;
 	}
 	.decscription{
@@ -28,13 +36,61 @@
 	}
 }
 
+.facilities{
+	table{
+		width: 100%;
+	}
+	th, td{
+		padding: 3px 15px;
+	}
+	th{
+		font-weight: normal;
+	}
+	thead th{
+		background-color: #ceead0;
+		color: #518451;
+	}
+	tbody{
+		th{
+			text-align: left;
+		}
+		th, td{
+			background-color: #e8f3dc;
+			font-weight: normal;
+			color: #6b7b5a;
+		}
+		td{
+			text-align: center;
+		}
+	}
+}
+
+.products{
+	ul{
+		display: flex;
+		flex-flow: row wrap;
+	}
+	li{
+		min-width: 50%;
+		box-sizing: border-box;
+		padding: 1rem 2rem 1rem 0;
+	}
+}
+
 @media screen and (max-width: $mobile-width),
   screen and (max-width: $mobile-width2) and (max-height: $mobile-height) and (orientation: landscape) {
   	.customers{
-  		display: block;
-		margin-right: 0;
+  		ul{
+	  		display: block;
+			margin-right: 0;
+		}
 		li{
 			padding-right: 0;
 		}
   	}
+  	.products{
+  		ul{
+  			display: block;
+  		}
+	}
 }
