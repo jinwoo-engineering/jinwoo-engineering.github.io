@@ -82,3 +82,24 @@
 		}
 	}
 }
+
+// 회사현황
+.facilities{
+	.photos{
+		display: block;
+	}
+	.photo{
+		display: inline-block;
+	}
+}
+.products{
+	&-list{
+		display: block;
+		&:after{
+			@include float-clear;
+		}
+	}
+	&-item{
+		float: left;
+	}
+}

@@ -5,27 +5,25 @@
 @import "_layout.scss";
 @import "_layout-mobile.scss";
 
+
 .customers{
-	ul{
+	overflow: hidden;
+	&-list{
 		display: flex;
 		flex-flow: row wrap;
 		margin-right: -2rem;
-		margin-bottom: 2rem;
 	}
-	li{
+	&-item{
 		min-width: 50%;
 		box-sizing: border-box;
 		padding: 1rem 2rem 1rem 0;
 	}
 	.section-title2{
 		font-weight: 400;
-	}
-	.__title{
-		font-size: 1rem;
-		font-weight: 400;
-		color: #1ba21b;
-		border-bottom: solid 1px #1ba21b;
-	}
+		&:nth-of-type(2){
+			margin-top: 2rem;
+		}
+	}	
 	.address{
 		margin: 13px 0 10px;
 		line-height: 1.5;
@@ -63,34 +61,80 @@
 			text-align: center;
 		}
 	}
+	.note{
+		margin-top: 10px;
+		font-size: 12px;
+	}
+	.photos{
+		display: flex;
+		justify-content: space-around;
+		// margin-top: 10px;
+		padding: 1rem 0 2rem;
+		// background-color: #eaeaea;
+		.photo {
+			@include box-shadow;
+			padding: 0.5rem;
+		}
+	}
 }
 
 .products{
-	ul{
+	padding-bottom: 3rem;
+	&-list{
 		display: flex;
 		flex-flow: row wrap;
+		// margin-right: -2rem;
 	}
-	li{
+	&-item{
 		min-width: 50%;
 		box-sizing: border-box;
 		padding: 1rem 2rem 1rem 0;
+	}
+	.description{
+		color: #060221;
+	}
+	.photos{
+		margin-top: 10px;
+	}
+	.photo {
+		display: inline-block;
+		@include box-shadow;
+		padding: 0.5rem;
+		margin-right: 1rem;
+	}
+	.note{
+		color: #060221;
 	}
 }
 
 @media screen and (max-width: $mobile-width),
   screen and (max-width: $mobile-width2) and (max-height: $mobile-height) and (orientation: landscape) {
   	.customers{
-  		ul{
+  		&-list{
 	  		display: block;
 			margin-right: 0;
 		}
-		li{
+		&-item{
 			padding-right: 0;
 		}
   	}
+  	.facilities{
+  		.photos{
+			flex-flow: row wrap;
+  		}
+		.photo{
+			margin-bottom: 10px;
+		}
+  	}
   	.products{
-  		ul{
+  		&-list{
   			display: block;
   		}
+  		&-item{
+			margin-right: 0;
+		}
+		.photo{
+			margin-right: 1rem;
+		}
 	}
 }

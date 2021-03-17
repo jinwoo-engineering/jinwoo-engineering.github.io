@@ -100,6 +100,10 @@ $mobile-height: 500px;
 	.contents {
 		padding: $content-space-mobile $content-space-mobile 1.5rem;
 	}
+	.section {
+		margin-top: 2rem;
+	}
+
 	.footer {
 		padding: $content-space-mobile;
 		&-inner {
