@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-@import "_lt-ie9-mixins.scss";
+@import "_ie9-mixins.scss";
 
 .gnb{
 	@include layout-gnb;

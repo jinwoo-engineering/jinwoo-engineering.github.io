@@ -24,23 +24,41 @@
   display: table-cell;
 }
 
-.facilities .photos {
-  display: block;
+.summary dl {
+  display: table;
+  width: 100%;
 }
-.facilities .photo {
-  display: inline-block;
+.summary dt {
+  display: table-cell;
+}
+.summary dd {
+  display: table-cell;
 }
 
-.products-list {
+.map {
   display: block;
 }
-.products-list:after {
+.map:after {
   content: "";
   display: table;
   clear: both;
 }
-.products-item {
+.map-image {
   float: left;
+  width: 50%;
+  margin-right: 2rem;
+}
+.map-detail {
+  margin-left: auto;
+}
+.map-detail dl {
+  display: table;
+}
+.map-detail dt {
+  display: table-cell;
+}
+.map-detail dd {
+  display: table-cell;
 }
 
-/*# sourceMappingURL=lt-ie9-status.css.map */
+/*# sourceMappingURL=ie9-about.css.map */
