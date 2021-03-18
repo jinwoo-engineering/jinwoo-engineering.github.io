@@ -5,7 +5,9 @@ $mobile-width2: 850px;
 $mobile-height: 500px;
 
 @media screen and (max-width: $mobile-width),
-	screen and (max-width: $mobile-width2) and (max-height: $mobile-height) and (orientation: landscape) {
+	screen and (max-width: $mobile-width2) 
+			and (max-height: $mobile-height) 
+			and (orientation: landscape) {
 	.header {
 		padding: 0;
 		background: #fff;

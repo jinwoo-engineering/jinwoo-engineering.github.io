@@ -121,7 +121,9 @@
 }
 
 @media screen and (max-width: $mobile-width),
-  screen and (max-width: $mobile-width2) and (max-height: $mobile-height) and (orientation: landscape) {
+  screen and (max-width: $mobile-width2) 
+  			and (max-height: $mobile-height) 
+  			and (orientation: landscape) {
   	.customers{
   		&-list{
 	  		display: block;
