@@ -2,6 +2,7 @@
 	max-width: 1190px;
 	margin: 0 auto;
 }
+
 @mixin section-text-size {
 	font-size: 1rem;
 }
@@ -24,10 +25,29 @@
 	@include section-text-weight;
 	@include section-text-focus-color;
 }
+@mixin section-title{
+	margin-bottom: 1rem;
+	font-size: 1.5rem;
+	font-weight: 400;
+	color: #060221;
+}
+@mixin section-title2{
+	font-size: 1.2rem;
+	font-weight: 300;
+	color: #060221;
+}
+@mixin section-title3{
+	font-size: 1.1rem;
+	font-weight: 400;
+	color: #1ba21b;
+	border-bottom: solid 1px #1ba21b;
+}
+
 @mixin button-default {
 	background-color: transparent;
 	outline: none;
 }
+
 @mixin box-shadow{
 	box-shadow: 0 50px 75px rgb(0 0 0 / 10%);
 }

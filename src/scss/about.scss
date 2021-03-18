@@ -6,6 +6,10 @@
 @import "_layout-mobile.scss";
 
 
+.section-title{
+	@include section-title;
+}
+
 .introduce {
 	.__focus {
 		@include section-text-focus;

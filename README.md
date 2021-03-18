@@ -36,6 +36,7 @@ https://jinwoo-engineering.github.io/
 - Add build
 - Server
 - media query variable?
+- 모바일 환경에서만 모바일 css load
 - ~~[2021.03.12] CSS tab size 수정~~
 - ~~[2021.03.11] Check browser~~
 - ~~[2021.03.11] Add forEach support~~

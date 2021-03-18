@@ -85,23 +85,6 @@ body {
 	&:first-child{
 		margin-top: 0;
 	}
-	&-title {
-		margin-bottom: 1rem;
-		font-size: 1.5rem;
-		font-weight: 400;
-		color: #060221;
-	}
-	&-title2 {
-		font-size: 1.2rem;
-		font-weight: 300;
-		color: #060221;
-	}
-	&-title3{
-		font-size: 1.1rem;
-		font-weight: 400;
-		color: #1ba21b;
-		border-bottom: solid 1px #1ba21b;
-	}
 }
 
 .footer {
@@ -114,8 +97,6 @@ body {
 		display: flex;
 		@include contents-wrap;
 	}
-	// .info {
-	// }
 	.copyright {
 		margin-left: auto;
 		text-align: right;

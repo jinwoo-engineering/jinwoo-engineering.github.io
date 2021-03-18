@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+@import "_lt-ie9-mixins.scss";
+
+.gnb{
+	@include layout-gnb;
+}
+
+.footer{
+	@include layout-footer;
+}
+
+.summary {
+	dl {
+		display: table;
+		width: 100%;
+	}
+	dt {
+		display: table-cell;
+	}
+	dd {
+		display: table-cell;
+	}
+}
+
+.map{
+	display: block;
+	&:after {
+		@include float-clear;
+	}
+	&-image{
+		float: left;
+		width: 50%;
+		margin-right: 2rem;
+	}
+	&-detail{
+		margin-left: auto;
+		dl{
+			display: table;
+		}
+		dt{
+			display: table-cell;
+		}
+		dd{
+			display: table-cell;
+		}
+	}
+}

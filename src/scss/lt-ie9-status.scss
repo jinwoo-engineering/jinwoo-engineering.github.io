@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+@import "_lt-ie9-mixins.scss";
+
+.gnb{
+    @include layout-gnb;
+}
+
+.footer{
+    @include layout-footer;
+}
+
+.facilities{
+    .photos{
+        display: block;
+    }
+    .photo{
+        display: inline-block;
+    }
+}
+.products{
+    &-list{
+        display: block;
+        &:after{
+            @include float-clear;
+        }
+    }
+    &-item{
+        float: left;
+    }
+}
