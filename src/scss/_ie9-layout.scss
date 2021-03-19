@@ -1,0 +1,28 @@
+
+.gnb{
+    .brand {
+        float: left;
+    }
+    .nav {
+        float: right;
+    }
+    .nav-item {
+        display: inline-block;
+    }
+    &:after {
+        @include float-clear;
+    }
+}
+
+.footer{
+    &-inner {
+        display: table;
+        width: 100%;
+    }
+    .info {
+        display: table-cell;
+    }
+    .copyright {
+        display: table-cell;
+    }
+}

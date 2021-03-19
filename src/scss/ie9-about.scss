@@ -1,14 +1,7 @@
 @charset "UTF-8";
 
 @import "_ie9-mixins.scss";
-
-.gnb{
-	@include layout-gnb;
-}
-
-.footer{
-	@include layout-footer;
-}
+@import "_ie9-layout.scss";
 
 .summary {
 	dl {

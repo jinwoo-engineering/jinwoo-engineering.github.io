@@ -5,11 +5,41 @@ html {
 }
 body {
 	height: 100%;
+	margin: 0;
 	background-color: #fff;
 }
 
 .root {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
 	background: #fbfbfb;
+}
+
+.header {
+	flex: none;
+	box-sizing: border-box;
+	padding: 1rem $content-space;
+	background: #a9eae8;
+	&-inner {
+		@include contents-wrap;
+	}
+	&-titles {
+		padding: 1rem 0;
+		text-align: center;
+	}
+	&-title {
+		font-weight: 400;
+	}
+	&-menu {
+		padding-top: 0.5rem;
+		font-size: 0.8rem;
+		color: #888;
+		.__link {
+			padding: 0.3rem;
+			color: #888;
+		}
+	}
 }
 
 .gnb {
@@ -47,32 +77,9 @@ body {
 	}
 }
 
-.header {
-	box-sizing: border-box;
-	padding: 1rem $content-space;
-	background: #a9eae8;
-	&-inner {
-		@include contents-wrap;
-	}
-	&-titles {
-		padding: 1rem 0;
-		text-align: center;
-	}
-	&-title {
-		font-weight: 400;
-	}
-	.menu {
-		padding-top: 0.5rem;
-		font-size: 0.8rem;
-		color: #888;
-		.__link {
-			padding: 0.3rem;
-			color: #888;
-		}
-	}
-}
 
 .contents {
+	flex: 1;
 	padding: $content-space $content-space 3rem;
 	&-inner {
 		@include contents-wrap;
@@ -88,6 +95,7 @@ body {
 }
 
 .footer {
+	flex: none;
 	padding: $content-space;
 	background: #2d323d;
 	line-height: 1.5;
