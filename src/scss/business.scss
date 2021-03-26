@@ -25,13 +25,11 @@
 		align-items: center;
 		.__text{
 			flex: 2;
-			// display: inline-block;
 			max-width: 60%;
 			padding: 0.5rem 1rem;
 			border-radius: 50%;
 			background: #cde5be;
 			color: #2b3525;
-			// font-weight: bold;
 			@include box-shadow;
 
 		}
@@ -39,6 +37,13 @@
 			flex: 1;
 			margin-left: 10px;
 		}
+	}
+}
+
+.business{
+	&-image{
+		margin-top: 10px;
+		text-align: center;
 	}
 }
 
@@ -52,4 +57,29 @@
 			background-color: #a9eae8;
 		}
 	}
+	.process{
+		&-list{
+		}
+		&-item{
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			padding: 10px 0;
+			.__text{
+				width: 80%;
+			}
+			.__arrow{
+				margin: 10px 0 0 ;
+				transform: rotate(90deg)
+			}
+		}
+	}
+	.business{
+		&-image{
+			img{
+				width: 100%;
+			}
+		}
+	}
+
 }

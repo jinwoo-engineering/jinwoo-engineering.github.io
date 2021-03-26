@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+@import "_ie9-mixins.scss";
+@import "_ie9-layout.scss";
+
+
+.process{
+    &-list{
+        @include float-clear;
+    }
+    &-item{
+        float: left;
+        .__text{
+            display: inline-block;
+            width: 60%;
+        }
+        .__arrow{
+            margin-left: 50px;
+        }
+    }
+}

@@ -10,14 +10,14 @@ body {
 }
 
 .root {
-	display: flex;
-	flex-direction: column;
+	// display: flex;
+	// flex-direction: column;
 	min-height: 100%;
 	background: #fbfbfb;
 }
 
 .header {
-	flex: none;
+	// flex: none;
 	box-sizing: border-box;
 	padding: 1rem $content-space;
 	background: #a9eae8;
@@ -95,7 +95,7 @@ body {
 }
 
 .footer {
-	flex: none;
+	// flex: none;
 	padding: $content-space;
 	background: #2d323d;
 	line-height: 1.5;
