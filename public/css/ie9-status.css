@@ -1,5 +1,6 @@
 .gnb .brand {
   float: left;
+  margin-top: 9px;
 }
 .gnb .nav {
   float: right;
