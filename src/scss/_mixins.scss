@@ -51,3 +51,28 @@
 @mixin box-shadow{
 	box-shadow: 0 50px 75px rgb(0 0 0 / 10%);
 }
+@mixin table{
+	th, td{
+		padding: 3px 15px;
+	}
+	th{
+		font-weight: normal;
+	}
+	thead th{
+		background-color: #ceead0;
+		color: #518451;
+	}
+	tbody{
+		th{
+			text-align: left;
+		}
+		th, td{
+			background-color: #e8f3dc;
+			font-weight: normal;
+			color: #6b7b5a;
+		}
+		td{
+			text-align: center;
+		}
+	}
+}
