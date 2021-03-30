@@ -10,6 +10,11 @@
 	@include section-title;
 }
 
+.section-title2{
+	@include section-title2;
+	margin-top: 1rem;
+}
+
 .expected{
 	&-units{
 		text-align: right;

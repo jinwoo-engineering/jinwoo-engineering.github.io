@@ -10,6 +10,10 @@
 	@include section-title;
 }
 
+.section-title2{
+	@include section-title2;
+}
+
 .introduce {
 	.__focus {
 		@include section-text-focus;

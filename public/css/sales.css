@@ -271,6 +271,13 @@ body {
   color: #060221;
 }
 
+.section-title2 {
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #060221;
+  margin-top: 1rem;
+}
+
 .expected-units {
   text-align: right;
 }
