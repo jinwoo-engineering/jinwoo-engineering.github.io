@@ -10,19 +10,18 @@ body {
 }
 
 .root {
-	// display: flex;
-	// flex-direction: column;
-	min-height: 100%;
+	display: table;
+	width: 100%; height: 100%;
 	background: #fbfbfb;
 }
 
 .header {
-	// flex: none;
+	display: table-row;
 	box-sizing: border-box;
-	padding: 1rem $content-space;
 	background: #a9eae8;
 	&-inner {
 		@include contents-wrap;
+		padding: 1rem $content-space;
 	}
 	&-titles {
 		padding: 1rem 0;
@@ -79,10 +78,10 @@ body {
 
 
 .contents {
-	flex: 1;
-	padding: $content-space $content-space 3rem;
+	display: table-row;
 	&-inner {
 		@include contents-wrap;
+		padding: $content-space $content-space 3rem;
 	}
 }
 
@@ -95,8 +94,7 @@ body {
 }
 
 .footer {
-	// flex: none;
-	padding: $content-space;
+	display: table-row;
 	background: #2d323d;
 	line-height: 1.5;
 	font-size: 0.8rem;
@@ -104,6 +102,7 @@ body {
 	&-inner {
 		display: flex;
 		@include contents-wrap;
+		padding: $content-space;
 	}
 	.copyright {
 		margin-left: auto;

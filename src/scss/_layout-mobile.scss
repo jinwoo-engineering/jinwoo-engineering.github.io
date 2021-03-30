@@ -9,8 +9,10 @@ $mobile-height: 500px;
 			and (max-height: $mobile-height) 
 			and (orientation: landscape) {
 	.header {
-		padding: 0;
 		background: #fff;
+		&-inner{
+			padding: 0;
+		}
 		&-titles {
 			background-color: #a9eae8;
 		}
@@ -100,16 +102,18 @@ $mobile-height: 500px;
 		}
 	}
 	.contents {
-		padding: $content-space-mobile $content-space-mobile 1.5rem;
+		&-inner{
+			padding: $content-space-mobile $content-space-mobile 1.5rem;
+		}
 	}
 	.section {
 		margin-top: 2rem;
 	}
 
 	.footer {
-		padding: $content-space-mobile;
 		&-inner {
 			flex-direction: column;
+			padding: $content-space-mobile;
 		}
 		.copyright {
 			margin-left: 0;
