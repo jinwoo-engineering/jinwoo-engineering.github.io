@@ -10,18 +10,18 @@ body {
 }
 
 .root {
-	display: table;
-	width: 100%; height: 100%;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
 	background: #fbfbfb;
 }
 
 .header {
-	display: table-row;
 	box-sizing: border-box;
+	padding: 1rem $content-space;
 	background: #a9eae8;
 	&-inner {
 		@include contents-wrap;
-		padding: 1rem $content-space;
 	}
 	&-titles {
 		padding: 1rem 0;
@@ -78,10 +78,9 @@ body {
 
 
 .contents {
-	display: table-row;
+	padding: $content-space $content-space 3rem;
 	&-inner {
 		@include contents-wrap;
-		padding: $content-space $content-space 3rem;
 	}
 }
 
@@ -94,7 +93,8 @@ body {
 }
 
 .footer {
-	display: table-row;
+	margin-top: auto;
+	padding: $content-space;
 	background: #2d323d;
 	line-height: 1.5;
 	font-size: 0.8rem;
@@ -102,7 +102,6 @@ body {
 	&-inner {
 		display: flex;
 		@include contents-wrap;
-		padding: $content-space;
 	}
 	.copyright {
 		margin-left: auto;
@@ -133,5 +132,4 @@ body {
 		top: -100%;
 	}
 }
-
 
