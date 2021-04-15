@@ -280,6 +280,18 @@ body {
   margin-top: 1rem;
 }
 
+.expected {
+  display: flex;
+}
+.expected-media {
+  flex: 1;
+}
+.expected-media img {
+  width: 100%;
+}
+.expected-data {
+  flex: 1.5;
+}
 .expected-units {
   text-align: right;
 }
@@ -314,6 +326,10 @@ body {
   }
   .header-titles {
     background-color: #a9eae8;
+  }
+
+  .expected {
+    display: block;
   }
 }
 

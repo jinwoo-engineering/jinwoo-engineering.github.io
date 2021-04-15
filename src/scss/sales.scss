@@ -16,6 +16,16 @@
 }
 
 .expected{
+	display: flex;
+	&-media{
+		flex: 1;
+		img{
+			width: 100%;
+		}
+	}
+	&-data{
+		flex: 1.5;
+	}
 	&-units{
 		text-align: right;
 	}
@@ -42,6 +52,9 @@
 		&-titles {
 			background-color: #a9eae8;
 		}
+	}
+	.expected{
+		display: block;
 	}
 
 }
