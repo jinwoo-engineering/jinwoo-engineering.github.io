@@ -34,8 +34,11 @@ function Template () {
             <div class="footer-inner">
                 <div class="info">
                     <p class="address">경기도 동두천시 삼육사로 548번길 84 (상패동)</p>
-                    <p class="tel">TEL : 031-858-2430</p>
-                    <p class="tel">FAX : 031-858-2429</p>
+                    <p class="tel">TEL : 031-858-2430 
+                        <a href="tel: 031-858-2430" class="__link">통화</a>
+                        <a href="sms: 031-858-2430" class="__link">문자</a>
+                    </p>
+                    <p class="tel">FAX : <a href="tel: 031-858-2429">031-858-2429</a></p>
                     <p class="email">EMAIL : <a href="mailto:jinwoo43705@naver.com">jinwoo43705@naver.com</a></p>
                 </div>
                 <div class="copyright">Copyright © JINWOO ENGINEERING. All rights reserved.</div>
@@ -126,8 +129,11 @@ Template.prototype.footer = function () {
         <div class="footer-inner">
             <div class="info">
                 <p class="address">경기도 동두천시 삼육사로 548번길 84 (상패동)</p>
-                <p class="tel">TEL : 031-858-2430</p>
-                <p class="tel">FAX : 031-858-2429</p>
+                <p class="tel">TEL : 031-858-2430 
+                    <a href="tel: 031-858-2430" class="__link">통화</a>
+                    <a href="sms: 031-858-2430" class="__link">문자</a>
+                </p>
+                <p class="tel">FAX : <a href="tel: 031-858-2429">031-858-2429</a></p>
                 <p class="email">EMAIL : <a href="mailto:jinwoo43705@naver.com">jinwoo43705@naver.com</a></p>
             </div>
             <div class="copyright">Copyright © JINWOO ENGINEERING. All rights reserved.</div>
