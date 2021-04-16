@@ -6,7 +6,7 @@ function Template () {
 Template.prototype.gnb = function () {
     return `
         <h1 class="brand">진우엔지니어링</h1>
-        <button type="button" class="toggle-button">
+        <button type="button" class="toggle-button" data-gnb-button>
             <span class="bars">
                 <span class="__bar"></span>
                 <span class="__bar"></span>

@@ -39,7 +39,7 @@ View.prototype.handleToggleButtonClick = function () {
     const __hp = this.helpers
     __hp.qsa('.gnb')
         .forEach(gnb => {
-            __hp.qs('.toggle-button', gnb)
+            __hp.qs('[data-gnb-button]', gnb)
                 .addEventListener('click', function () {
                     const __is = gnb.getAttribute('data-expanded')
                     gnb.setAttribute('data-expanded', __is === 'false')
