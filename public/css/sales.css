@@ -132,6 +132,11 @@ body {
   max-width: 1190px;
   margin: 0 auto;
 }
+.footer .tel .__link {
+  border-radius: 3px;
+  border: 1px solid #828282;
+  font-size: 0.5rem;
+}
 .footer .copyright {
   margin-left: auto;
   text-align: right;
