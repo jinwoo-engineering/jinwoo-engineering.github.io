@@ -1,1 +1,1 @@
-'use strict';function Helpers(){}Helpers.prototype.qs=function(a,b){return(b||document).querySelector(a)},Helpers.prototype.qsa=function(a,b){return(b||document).querySelectorAll(a)},NodeList.prototype.forEach=Array.prototype.forEach,window.app=window.app||{},window.app.Helpers=Helpers;
+'use strict';window.qs=function(a,b){return(b||document).querySelector(a)},window.qsa=function(a,b){return(b||document).querySelectorAll(a)},NodeList.prototype.forEach=Array.prototype.forEach;

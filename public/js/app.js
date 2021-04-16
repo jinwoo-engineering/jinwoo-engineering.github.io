@@ -1,1 +1,1 @@
-'use strict';function Jinwoo(){this.helpers=new window.app.Helpers,this.template=new window.app.Template,this.view=new window.app.View(this.helpers,this.template),this.controller=new window.app.Controller(this.view)}var jinwoo=new Jinwoo;jinwoo.controller.init();
+'use strict';function Jinwoo(){this.template=new window.app.Template,this.view=new window.app.View(this.template),this.controller=new window.app.Controller(this.view)}var jinwoo=new Jinwoo;function setView(){jinwoo.controller.setView()}window.addEventListener("load",function(){setView()},!1);

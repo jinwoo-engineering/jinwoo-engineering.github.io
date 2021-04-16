@@ -1,51 +1,50 @@
 'use strict'
 
-function View (helpers, template) {
-    this.helpers = helpers
+function View (template) {
     this.template = template
-    this.cpnts = document.querySelectorAll('[data-component]')
-    this.$gnbFix = this.helpers.qs('#gnbFix')
-    this.$header = this.helpers.qs('#header')
+    this.$cpnts = window.qsa('[data-component]')
+    this.$gnbFix = window.qs('#gnbFix')
+    this.$header = window.qs('#header')
 }
 
-View.prototype.drawComponents = function () {
-    const __cn = {
-        gnb: 'gnb',
-        footer: 'footer',
-        gnbFix: 'gnb gnbFix'
+View.prototype.render = function(viewCmd, parameter) {
+    const self = this
+    const commands = {
+        showComponents: function(){
+            self.template.drawComponents( self.$cpnts )
+        },
+        showHideGnbFix: function(){
+            self.$gnbFix.setAttribute('data-hidden', parameter)
+        }
     }
-    this.cpnts.forEach(cpnt => {
-        const __key = cpnt.getAttribute('data-component')
-        cpnt.className = __cn[__key]
-        cpnt.innerHTML = this.template[__key]()
-        if (__key === 'gnb' || __key === 'gnbFix') {
-            cpnt.setAttribute('data-expanded', false)
-        }
-    })
+    commands[viewCmd]()
 }
 
-View.prototype.handleWindowScroll = function () {
+View.prototype.bind = function (event, handler) {
+    const self = this
     if (!this.$gnbFix) return
-    window.addEventListener('scroll', () => {
-        let __is = true
-        if (window.pageYOffset > this.$header.offsetHeight) {
-            __is = false
-        }
-        this.$gnbFix.setAttribute('data-hidden', __is)
-    }, false)
+    if( event === 'handleScroll') {
+        window.addEventListener('scroll', function(){
+            handler(self.$header)
+        }, false)
+    }
 }
+
+
+
 
 View.prototype.handleToggleButtonClick = function () {
-    const __hp = this.helpers
-    __hp.qsa('.gnb')
+    window.qsa('.gnb')
         .forEach(gnb => {
-            __hp.qs('[data-gnb-button]', gnb)
+            window.qs('[data-gnb-button]', gnb)
                 .addEventListener('click', function () {
                     const __is = gnb.getAttribute('data-expanded')
                     gnb.setAttribute('data-expanded', __is === 'false')
                 }, false)
         })
 }
+
+
 
 window.app = window.app || {}
 window.app.View = View
