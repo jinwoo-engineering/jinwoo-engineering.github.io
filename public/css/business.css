@@ -68,6 +68,9 @@ body {
   padding: 0.3rem;
   color: #888;
 }
+.header-menu .__link:hover {
+  color: #141414;
+}
 
 .gnb {
   display: flex;
@@ -97,7 +100,7 @@ body {
   color: #333;
 }
 .gnb .nav-item .__link:hover {
-  color: #000;
+  color: #8d8d8d;
 }
 
 .contents {
@@ -134,7 +137,7 @@ body {
 }
 .footer .tel .__link {
   border-radius: 3px;
-  border: 1px solid #828282;
+  border: 1px solid #5b5b5b;
   font-size: 0.5rem;
 }
 .footer .copyright {
@@ -143,6 +146,9 @@ body {
 }
 .footer a {
   color: #828282;
+}
+.footer a:hover {
+  text-decoration: underline;
 }
 
 .gnbFix {
