@@ -1,1 +1,1 @@
-'use strict';window.qs=function(a,b){return(b||document).querySelector(a)},window.qsa=function(a,b){return(b||document).querySelectorAll(a)},NodeList.prototype.forEach=Array.prototype.forEach;
+'use strict';window.$qs=function(a,b){return(b||document).querySelector(a)},window.$qsa=function(a,b){return(b||document).querySelectorAll(a)},NodeList.prototype.forEach=Array.prototype.forEach;

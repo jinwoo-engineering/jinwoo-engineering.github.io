@@ -2,13 +2,12 @@
 
 function View (template) {
     this.template = template
-    this.$cpnts = window.qsa('[data-component]')
-    this.$gnbFix = window.qs('#gnbFix')
-    this.$header = window.qs('#header')
+    this.$cpnts = window.$qsa('[data-component]')
+    this.$gnbFix = window.$qs('#gnbFix')
+    this.$header = window.$qs('#header')
 }
 
 View.prototype.render = function(viewCmd, param) {
-
     const self = this
 
     const commands = {
@@ -28,23 +27,25 @@ View.prototype.render = function(viewCmd, param) {
 }
 
 View.prototype.bind = function (event, handler) {
-
     const self = this
 
-    if( event === 'windowScroll' ){
-        if ( !this.$gnbFix ) return
-        window.addEventListener('scroll', function(){
-            handler(self.$header)
-        }, false)
-    
-    } else if( event === 'gnbsButtonClick' ){
-        window.qsa('.gnb')
-            .forEach(gnb => {
-                window.qs('[data-gnb-button]', gnb)
-                    .addEventListener('click', function () {
-                        handler(gnb)
-                    }, false)
+    switch( event ){
+        case 'windowScroll': 
+            if ( !this.$gnbFix ) return
+            window.addEventListener('scroll', function(){
+                handler(self.$header)
             })
+            break
+
+        case 'gnbsButtonClick' :
+            window.$qsa('.gnb')
+                .forEach(gnb => {
+                    window.$qs('[data-gnb-button]', gnb)
+                        .addEventListener('click', function () {
+                            handler(gnb)
+                        })
+                })
+            break
     }
 }
 
