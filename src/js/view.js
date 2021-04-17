@@ -7,7 +7,7 @@ function View (template) {
     this.$header = window.qs('#header')
 }
 
-View.prototype.render = function(viewCmd, parameter) {
+View.prototype.render = function(viewCmd, param) {
 
     const self = this
 
@@ -15,12 +15,12 @@ View.prototype.render = function(viewCmd, parameter) {
         showComponents: function(){
             self.template.drawComponents( self.$cpnts )
         },
-        showHideGnbFix: function(){
-            self.$gnbFix.setAttribute('data-hidden', parameter)
+        setGnbFixHidden: function(){
+            self.$gnbFix.setAttribute('data-hidden', param)
         },
-        setDataExpanded: function(){
-            const isExpanded = parameter.getAttribute('data-expanded')
-            parameter.setAttribute('data-expanded', isExpanded === 'false')         
+        setElemExpanded: function(){
+            const isExpanded = param.getAttribute('data-expanded')
+            param.setAttribute('data-expanded', isExpanded === 'false')         
         }
     }
 
@@ -31,13 +31,13 @@ View.prototype.bind = function (event, handler) {
 
     const self = this
 
-    if ( event === 'handleScroll' ) {
-        if (!this.$gnbFix) return
+    if( event === 'windowScroll' ){
+        if ( !this.$gnbFix ) return
         window.addEventListener('scroll', function(){
             handler(self.$header)
         }, false)
-
-    } else if ( event === 'gnbsButtonClick' ) {
+    
+    } else if( event === 'gnbsButtonClick' ){
         window.qsa('.gnb')
             .forEach(gnb => {
                 window.qs('[data-gnb-button]', gnb)
