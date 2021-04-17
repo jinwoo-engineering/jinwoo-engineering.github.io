@@ -4,27 +4,32 @@ function Controller (view) {
     const self = this
     self.view = view
 
-    self.view.bind('handleScroll', function (){
+    self.view.bind('handleScroll', function (header){
         self.controlScroll(header)
     })
 }
 
 Controller.prototype.setView = function () {
-    this.view.render('showComponents')
+    const self = this
 
-    this.view.handleToggleButtonClick()
+    self.view.render('showComponents')
+
+    self.view.bind('gnbsButtonClick', function (gnb){
+        self.toggleGnb(gnb)
+    })
 }
 
 Controller.prototype.controlScroll = function (header) {
-    const self = this
     let isHidden = true
     if (window.pageYOffset > header.offsetHeight) {
         isHidden = false
     }
-    self.view.render('showHideGnbFix', isHidden)
+    this.view.render('showHideGnbFix', isHidden)
 }
 
-
+Controller.prototype.toggleGnb = function (gnb) {
+    this.view.render('setDataExpanded', gnb)
+}
 
 window.app = window.app || {}
 window.app.Controller = Controller
