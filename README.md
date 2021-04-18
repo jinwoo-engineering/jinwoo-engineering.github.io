@@ -8,3 +8,4 @@ https://jinwoo-engineering.github.io/
 - js: Add comment
 - Add delegate
 - Add test
+- Remove Babel

@@ -33,7 +33,11 @@ View.prototype.bind = function (event, handler) {
     case 'windowScroll' :
         if (!this.$gnbFix) return
         window.addEventListener('scroll', function () {
-            handler(self.$header)
+            let isHidden = true
+            if (window.pageYOffset > self.$header.offsetHeight) {
+                isHidden = false
+            }
+            self.render('setGnbFixHidden', isHidden)
         })
         break
 
@@ -42,7 +46,7 @@ View.prototype.bind = function (event, handler) {
             .forEach(gnb => {
                 window.$qs('[data-gnb-button]', gnb)
                     .addEventListener('click', function () {
-                        handler(gnb)
+                        self.render('setElemExpanded', gnb)
                     })
             })
         break

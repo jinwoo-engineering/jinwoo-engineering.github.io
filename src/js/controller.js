@@ -1,34 +1,13 @@
 'use strict'
 
 function Controller (view) {
-    const self = this
-    self.view = view
-
-    self.view.bind('windowScroll', function (header) {
-        self.comparePageY(header)
-    })
+    this.view = view
 }
 
 Controller.prototype.setView = function () {
-    const self = this
-
-    self.view.render('showComponents')
-
-    self.view.bind('gnbsButtonClick', function (gnb) {
-        self.toggleGnb(gnb)
-    })
-}
-
-Controller.prototype.comparePageY = function (header) {
-    let isHidden = true
-    if (window.pageYOffset > header.offsetHeight) {
-        isHidden = false
-    }
-    this.view.render('setGnbFixHidden', isHidden)
-}
-
-Controller.prototype.toggleGnb = function (gnb) {
-    this.view.render('setElemExpanded', gnb)
+    this.view.render('showComponents')
+    this.view.bind('windowScroll')
+    this.view.bind('gnbsButtonClick')
 }
 
 window.app = window.app || {}
