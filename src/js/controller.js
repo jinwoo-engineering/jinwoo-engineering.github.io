@@ -4,7 +4,7 @@ function Controller (view) {
     const self = this
     self.view = view
 
-    self.view.bind('windowScroll', function (header){
+    self.view.bind('windowScroll', function (header) {
         self.comparePageY(header)
     })
 }
@@ -14,7 +14,7 @@ Controller.prototype.setView = function () {
 
     self.view.render('showComponents')
 
-    self.view.bind('gnbsButtonClick', function (gnb){
+    self.view.bind('gnbsButtonClick', function (gnb) {
         self.toggleGnb(gnb)
     })
 }

@@ -8,10 +8,10 @@ function Jinwoo (name) {
 
 const jinwoo = new Jinwoo()
 
-function setView(){
+function setView () {
     jinwoo.controller.setView()
 }
 
-window.addEventListener('load', function(){
+window.addEventListener('load', function () {
     setView()
 }, false)

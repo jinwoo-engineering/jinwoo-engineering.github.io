@@ -1,10 +1,10 @@
 'use strict'
 
 function Template () {
-    const self = this;
+    const self = this
 
     self.template = {
-        gnb: function(){
+        gnb: function () {
             return `
                 <h1 class="brand">진우엔지니어링</h1>
                 <button type="button" class="toggle-button" data-gnb-button>
@@ -34,7 +34,7 @@ function Template () {
                     </ul>
                 </nav>`
         },
-        footer: function(){ 
+        footer: function () {
             return `
                 <div class="footer-inner">
                     <div class="info">
@@ -49,9 +49,9 @@ function Template () {
                     <div class="copyright">Copyright © JINWOO ENGINEERING. All rights reserved.</div>
                 </div>`
         },
-        gnbFix: function(){ 
+        gnbFix: function () {
             return `<div class="gnbFix-inner">${self.template.gnb()}</div>`
-        },
+        }
     }
 }
 

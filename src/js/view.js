@@ -7,19 +7,19 @@ function View (template) {
     this.$header = window.$qs('#header')
 }
 
-View.prototype.render = function(viewCmd, param) {
+View.prototype.render = function (viewCmd, param) {
     const self = this
 
     const commands = {
-        showComponents: function(){
-            self.template.drawComponents( self.$cpnts )
+        showComponents: function () {
+            self.template.drawComponents(self.$cpnts)
         },
-        setGnbFixHidden: function(){
+        setGnbFixHidden: function () {
             self.$gnbFix.setAttribute('data-hidden', param)
         },
-        setElemExpanded: function(){
+        setElemExpanded: function () {
             const isExpanded = param.getAttribute('data-expanded')
-            param.setAttribute('data-expanded', isExpanded === 'false')         
+            param.setAttribute('data-expanded', isExpanded === 'false')
         }
     }
 
@@ -29,23 +29,23 @@ View.prototype.render = function(viewCmd, param) {
 View.prototype.bind = function (event, handler) {
     const self = this
 
-    switch( event ){
-        case 'windowScroll': 
-            if ( !this.$gnbFix ) return
-            window.addEventListener('scroll', function(){
-                handler(self.$header)
-            })
-            break
+    switch (event) {
+    case 'windowScroll' :
+        if (!this.$gnbFix) return
+        window.addEventListener('scroll', function () {
+            handler(self.$header)
+        })
+        break
 
-        case 'gnbsButtonClick' :
-            window.$qsa('.gnb')
-                .forEach(gnb => {
-                    window.$qs('[data-gnb-button]', gnb)
-                        .addEventListener('click', function () {
-                            handler(gnb)
-                        })
-                })
-            break
+    case 'gnbsButtonClick' :
+        window.$qsa('.gnb')
+            .forEach(gnb => {
+                window.$qs('[data-gnb-button]', gnb)
+                    .addEventListener('click', function () {
+                        handler(gnb)
+                    })
+            })
+        break
     }
 }
 

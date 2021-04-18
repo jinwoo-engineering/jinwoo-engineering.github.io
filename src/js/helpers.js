@@ -1,21 +1,11 @@
-  
-/*global NodeList */
-// (function (window) {
+'use strict'
 
-    'use strict';
+window.$qs = function (selector, scope) {
+    return (scope || document).querySelector(selector)
+}
 
-    window.$qs = function (selector, scope) {
-        return (scope || document).querySelector(selector)
-    }
+window.$qsa = function (selector, scope) {
+    return (scope || document).querySelectorAll(selector)
+}
 
-    window.$qsa = function (selector, scope) {
-        return (scope || document).querySelectorAll(selector)
-    }
-
-   /* window.$on = function (target, type, callback, useCapture) {
-        target.addEventListener(type, callback, !!useCapture);
-    };*/
-
-    NodeList.prototype.forEach = Array.prototype.forEach
-    
-// })(window);
+NodeList.prototype.forEach = Array.prototype.forEach
