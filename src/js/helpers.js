@@ -1,11 +1,13 @@
-'use strict'
+(function () {
+    'use strict'
 
-window.$qs = function (selector, scope) {
-    return (scope || document).querySelector(selector)
-}
+    window.$qs = function (selector, scope) {
+        return (scope || document).querySelector(selector)
+    }
 
-window.$qsa = function (selector, scope) {
-    return (scope || document).querySelectorAll(selector)
-}
+    window.$qsa = function (selector, scope) {
+        return (scope || document).querySelectorAll(selector)
+    }
 
-NodeList.prototype.forEach = Array.prototype.forEach
+    NodeList.prototype.forEach = Array.prototype.forEach
+})()
