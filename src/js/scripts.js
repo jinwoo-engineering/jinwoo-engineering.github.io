@@ -11,12 +11,11 @@
         }
     )()
 
-    var scripts = '<script src="./js/helpers{{_v}}.js"></script>' +
+    var scripts = '<script src="./js/helpers.js"></script>' +
             '<script src="./js/template{{_v}}.js"></script>' +
             '<script src="./js/view{{_v}}.js"></script>' +
-            '<script src="./js/controller{{_v}}.js">' +
-            '</script> <script src="./js/app{{_v}}.js">' +
-            '</script>'
+            '<script src="./js/controller{{_v}}.js"></script>' +
+            '<script src="./js/app{{_v}}.js"></script>'
     scripts = scripts.replace(/{{_v}}/gm, isIE ? '_lower' : '')
     document.open()
     document.write(scripts)

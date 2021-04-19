@@ -9,3 +9,4 @@ https://jinwoo-engineering.github.io/
 - Add delegate
 - Add test
 - Remove Babel
+- 속도 측정
