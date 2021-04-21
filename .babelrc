@@ -3,6 +3,12 @@
        "@babel/preset-env",
        ["minify", {"builtIns": false}]
     ], 
+    "ignore": [
+        "**/common.js",
+        "**/scripts.js",
+        "**/helpers.js",
+        "**/*.lower.js"
+    ],
     "plugins": [
         "babel-plugin-transform-remove-debugger", 
         "babel-plugin-transform-remove-undefined", 

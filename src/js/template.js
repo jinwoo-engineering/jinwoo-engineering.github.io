@@ -63,13 +63,16 @@
             footer: 'footer',
             gnbFix: 'gnb gnbFix'
         }
-        cpnts.forEach(cpnt => {
+        const draw = function (cpnt) {
             const key = cpnt.getAttribute('data-component')
             cpnt.className = name[key]
-            cpnt.innerHTML = self.template[key]()
             if (key === 'gnb' || key === 'gnbFix') {
                 cpnt.setAttribute('data-expanded', false)
             }
+            cpnt.innerHTML = self.template[key]()
+        }
+        cpnts.forEach(function (cpnt) {
+            draw(cpnt)
         })
     }
 

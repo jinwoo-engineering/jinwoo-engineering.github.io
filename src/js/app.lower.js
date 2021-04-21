@@ -1,0 +1,1 @@
+"use strict";(function(){'use strict';function a(){b.controller.setView()}var b=new function(){this.template=new window.app.Template,this.view=new window.app.View(this.template),this.controller=new window.app.Controller(this.view)};window.addEventListener("load",function(){a()},!1)})();

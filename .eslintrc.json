@@ -16,5 +16,10 @@
             "error",
             4
         ]
-    }
+    },
+    "ignorePatterns": [
+        "common.js", 
+        "scripts.js", 
+        "**/*.lower.js"
+    ]
 }

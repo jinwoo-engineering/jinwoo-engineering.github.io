@@ -16,7 +16,8 @@
             '<script src="./js/view{{_v}}.js"></script>' +
             '<script src="./js/controller{{_v}}.js"></script>' +
             '<script src="./js/app{{_v}}.js"></script>'
-    scripts = scripts.replace(/{{_v}}/gm, isIE ? '_lower' : '')
+    scripts = scripts.replace(/{{_v}}/gm, isIE ? '.lower' : '')
+
     document.open()
     document.write(scripts)
     document.close()
