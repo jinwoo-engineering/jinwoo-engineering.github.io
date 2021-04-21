@@ -3,3 +3,18 @@
 @import "_ie9-mixins.scss";
 @import "_ie9-layout.scss";
 
+.expected{
+    &:after{
+        @include float-clear;
+    }
+    &-media {
+        float: left;
+        img{
+            width: auto;
+        }
+    }
+    &-data{
+        float: left;
+        width: 50%;
+    }
+}
