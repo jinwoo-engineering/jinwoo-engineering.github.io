@@ -11,7 +11,7 @@
         }
     )()
 
-    var scripts = '<script src="./js/helpers.js"></script>' +
+    var scripts = '<script src="./js/helpers{{_v}}.js"></script>' +
             '<script src="./js/template{{_v}}.js"></script>' +
             '<script src="./js/view{{_v}}.js"></script>' +
             '<script src="./js/controller{{_v}}.js"></script>' +
