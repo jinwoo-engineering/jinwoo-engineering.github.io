@@ -7,17 +7,14 @@
     "start": "concurrently \"npm run watch:css\" \"npm run watch:js\" ",
     "watch:css": "npx sass --watch --style=compressed src/scss:src/css",
     "watch:js": "npx babel ./src/js --watch --out-dir ./src/js --out-file-extension .lower.js",
-
     "start--public": "concurrently \"npm run watch:html--public\" \"npm run watch:css--public\" \"npm run watch:js--public\"  \"npm run watch:js--public\"",
     "watch:html--public": "npx nodemon -e html -w ./src -x \"npm run minify:html\"",
     "watch:css--public": "npx sass --watch --style=compressed src/scss:public/css",
     "watch:js--public": "npx babel ./src/js --watch --out-dir ./public/js",
     "watch:js--lower": "npx babel ./src/js --watch --out-dir ./public/js --out-file-extension .lower.js --ignore 'src/js/common/*.js'",
     "minify:html": "npx html-minifier --file-ext html --input-dir ./src --output-dir ./public --collapse-whitespace --collapse-boolean-attributes --remove-comments --remove-empty-attributes  --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --remove-tag-whitespace --sort-attributes --sort-class-name --trim-custom-fragments --minify-css --minify-js",
-
     "prefixer:css": "npx postcss ./public/css/*.css --use autoprefixer -d ./public/css/",
     "build:css": "npx postcss ./public/css/*.css --use autoprefixer -d ./build/css/ --no-map --verbose",
-
     "eslint": "eslint -c .eslintrc.json ./src/js/*.js"
   },
   "repository": {
@@ -50,13 +47,14 @@
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.3.1",
+    "express": "^4.17.1",
     "html-minifier": "^4.0.0",
     "nodemon": "^2.0.7",
     "postcss-cli": "^8.3.1",
-    "sass": "^1.32.8",
-    "express": "^4.17.1"
+    "sass": "^1.32.8"
   },
   "browserslist": [
     "last 3 version"
-  ]
+  ],
+  "dependencies": {}
 }
