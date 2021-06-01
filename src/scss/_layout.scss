@@ -106,13 +106,6 @@ body {
 		display: flex;
 		@include contents-wrap;
 	}
-	.tel{
-		.__link{
-			border-radius: 3px;
-			border: 1px solid #5b5b5b;
-			font-size: 0.5rem;
-		}
-	}
 	.copyright {
 		margin-left: auto;
 		text-align: right;
