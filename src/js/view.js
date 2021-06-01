@@ -9,36 +9,31 @@
     }
 
     View.prototype.render = function (viewCmd, param) {
-        const self = this
-
         const commands = {
-            showComponents: function () {
-                self.template.drawComponents(self.$cpnts)
+            showComponents: () => {
+                this.template.drawComponents(this.$cpnts)
             },
-            setGnbFixHidden: function () {
-                self.$gnbFix.setAttribute('data-hidden', param)
+            setGnbFixHidden: () => {
+                this.$gnbFix.setAttribute('data-hidden', param)
             },
-            setElemExpanded: function () {
+            setElemExpanded: () => {
                 const isExpanded = param.getAttribute('data-expanded')
                 param.setAttribute('data-expanded', isExpanded === 'false')
             }
         }
-
         commands[viewCmd]()
     }
 
     View.prototype.bind = function (event, handler) {
-        const self = this
-
         switch (event) {
         case 'windowScroll' :
             if (!this.$gnbFix) return
-            window.addEventListener('scroll', function () {
+            window.addEventListener('scroll', () => {
                 let isHidden = true
-                if (window.pageYOffset > self.$header.offsetHeight) {
+                if (window.pageYOffset > this.$header.offsetHeight) {
                     isHidden = false
                 }
-                self.render('setGnbFixHidden', isHidden)
+                this.render('setGnbFixHidden', isHidden)
             })
             break
 
@@ -46,8 +41,8 @@
             window.$qsa('.gnb')
                 .forEach(gnb => {
                     window.$qs('[data-gnb-button]', gnb)
-                        .addEventListener('click', function () {
-                            self.render('setElemExpanded', gnb)
+                        .addEventListener('click', () => {
+                            this.render('setElemExpanded', gnb)
                         })
                 })
             break
