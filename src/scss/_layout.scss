@@ -33,10 +33,10 @@ body {
 	&-menu {
 		padding-top: 0.5rem;
 		font-size: 0.8rem;
-		color: #888;
+		color: #555;
 		.__link {
 			padding: 0.3rem;
-			color: #888;
+			color: #555;
 			&:hover{
 				color: #141414;
 			}
@@ -101,7 +101,8 @@ body {
 	background: #2d323d;
 	line-height: 1.5;
 	font-size: 0.8rem;
-	color: #828282;
+	color: rgba(255, 255, 255, 0.51);
+	// color: #828282;
 	&-inner {
 		display: flex;
 		@include contents-wrap;
@@ -111,7 +112,7 @@ body {
 		text-align: right;
 	}
 	a {
-		color: #828282;
+		color: rgba(255, 255, 255, 0.51);
 		&:hover{
 			text-decoration: underline;
 		}

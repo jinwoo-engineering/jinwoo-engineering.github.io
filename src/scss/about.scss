@@ -44,7 +44,8 @@
 		margin-bottom: 2rem;
 	}
 	.__focus {
-		color: #1ba21b;
+		color: #0a610a;
+		// color: #1ba21b;
 	}
 }
 
@@ -70,7 +71,7 @@
 			border-radius: 5px;
 			border: 1px solid #ddd;
 			font-size: 12px;
-			color: #828282;
+			@include section-text-color;
 		}
 		dl{
 			display: flex;
