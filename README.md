@@ -11,3 +11,5 @@ https://jinwoo-engineering.github.io/
 - Babel 환경별 셋팅
 - Eslint 확인
 - 속도 측정
+- 사진 클릭 시 크게 보기
+- 모바일 우선으로 css 전면 수정 

@@ -45,26 +45,70 @@
 }
 
 .facilities{
+	.section-title3{
+		margin-top: 1.5rem;
+	}
 	table{
 		width: 100%;
 	}
 	@include table;
-	.note{
-		margin-top: 10px;
-		font-size: 12px;
-	}
+	// .note{
+	// 	margin-top: 10px;
+	// 	font-size: 12px;
+	// }
+	
 	.photos{
 		display: flex;
-		justify-content: space-around;
-		// margin-top: 10px;
+		flex-flow: row wrap;
+		box-sizing: border-box;
 		padding: 1rem 0 2rem;
-		// background-color: #eaeaea;
 	}
-	.photo {
-		@include box-shadow;
-		padding: 0.5rem;
+	figure {
+		padding: 0 3px;
+		box-sizing: border-box;
+		img {
+			padding: 0.3rem;
+			width: 100%; 
+			height: auto;
+			box-sizing: border-box;
+			@include box-shadow;
+		}
+	}
+	.photos1 {
+		figure {
+			flex: 1 1 50%;
+			&:nth-child(odd):last-child{
+				flex: none;
+				width: 50%;
+			}
+		}
+	}
+	.photos2 {
+		figure{
+			img{
+				width: auto;
+				height: 160px;
+			}
+			&:first-child {
+				flex: none;
+				width: 100%;
+				img {
+					width: 100%; 
+					height: auto;
+				}
+			}
+		}
+	}
+	figcaption{
+		margin-top: 5px;
+		font-weight: 400;
+		font-size: 14px;
+		text-align: center;
 	}
 }
+
+
+
 
 .products{
 	padding-bottom: 3rem;
@@ -111,14 +155,6 @@
 			padding-right: 0;
 		}
   	}
-  	.facilities{
-  		.photos{
-			flex-flow: row wrap;
-  		}
-		.photo{
-			margin-bottom: 10px;
-		}
-  	}
   	.products{
   		&-list{
   			display: block;
@@ -128,6 +164,40 @@
 		}
 		.photo{
 			margin-right: 1rem;
+		}
+	}
+}
+
+
+@media screen and (min-width: 500px) {
+	.facilities{
+		.photos {
+		}
+		.photos1 {
+			flex-flow: initial;
+			figure{
+				flex: 1;
+				&:nth-child(odd):last-child{
+					flex: 1;
+					width: initial;
+				}
+			}
+		}
+		.photos2 {
+			figure{
+				img{
+					width: auto;
+					height: 160px;
+				}
+				&:first-child {
+					flex: initial;
+					width: initial;
+					img {
+						width: auto;
+					height: 160px;
+					}
+				}
+			}
 		}
 	}
 }
