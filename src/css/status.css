@@ -389,6 +389,23 @@ body {
   font-size: 14px;
   text-align: center;
 }
+.facilities .movies {
+  margin-top: 1rem;
+}
+.facilities .movies li {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px;
+}
+.facilities .movies iframe {
+  width: 100%;
+}
+.facilities .movies .__text {
+  font-weight: 400;
+  font-size: 1rem;
+  text-align: center;
+}
 
 .products {
   padding-bottom: 3rem;
@@ -462,6 +479,9 @@ body {
   .facilities .photos2 figure:first-child img {
     width: auto;
     height: 160px;
+  }
+  .facilities .movies li {
+    width: 49%;
   }
 }
 

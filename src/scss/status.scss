@@ -105,6 +105,23 @@
 		font-size: 14px;
 		text-align: center;
 	}
+	.movies {
+		margin-top: 1rem;
+		li {
+			display: inline-block;
+			width: 100%;
+			box-sizing: border-box;
+			padding: 5px;
+		}
+		iframe{
+			width: 100%;
+		}
+		.__text{
+			font-weight: 400;
+			font-size: 1rem;
+			text-align: center;
+		}
+	}
 }
 
 
@@ -199,5 +216,11 @@
 				}
 			}
 		}
+		.movies {
+			li {
+				width: 49%;
+			}
+		}
 	}
+	
 }
