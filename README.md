@@ -13,3 +13,4 @@ https://jinwoo-engineering.github.io/
 - 속도 측정
 - 사진 클릭 시 크게 보기
 - 모바일 우선으로 css 전면 수정 
+- 설비 메인 메뉴 추가
