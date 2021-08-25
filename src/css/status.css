@@ -320,93 +320,6 @@ body {
   color: #060221;
 }
 
-.facilities .section-title3 {
-  margin-top: 1.5rem;
-}
-.facilities table {
-  width: 100%;
-}
-.facilities th, .facilities td {
-  padding: 3px 15px;
-}
-.facilities th {
-  font-weight: normal;
-}
-.facilities thead th {
-  background-color: #d4e8d6;
-  color: #2b5d2b;
-}
-.facilities tbody th {
-  text-align: left;
-}
-.facilities tbody th, .facilities tbody td {
-  background-color: #e8f3dc;
-  font-weight: normal;
-  color: #666b61;
-}
-.facilities tbody td {
-  text-align: center;
-}
-.facilities .photos {
-  display: flex;
-  flex-flow: row wrap;
-  box-sizing: border-box;
-  padding: 1rem 0 2rem;
-}
-.facilities figure {
-  padding: 0 3px;
-  box-sizing: border-box;
-}
-.facilities figure img {
-  padding: 0.3rem;
-  width: 100%;
-  height: auto;
-  box-sizing: border-box;
-  box-shadow: 0 50px 75px rgba(0, 0, 0, 0.1);
-}
-.facilities .photos1 figure {
-  flex: 1 1 50%;
-}
-.facilities .photos1 figure:nth-child(odd):last-child {
-  flex: none;
-  width: 50%;
-}
-.facilities .photos2 figure img {
-  width: auto;
-  height: 160px;
-}
-.facilities .photos2 figure:first-child {
-  flex: none;
-  width: 100%;
-}
-.facilities .photos2 figure:first-child img {
-  width: 100%;
-  height: auto;
-}
-.facilities figcaption {
-  margin-top: 5px;
-  font-weight: 400;
-  font-size: 14px;
-  text-align: center;
-}
-.facilities .movies {
-  margin-top: 1rem;
-}
-.facilities .movies li {
-  display: inline-block;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 5px;
-}
-.facilities .movies iframe {
-  width: 100%;
-}
-.facilities .movies .__text {
-  font-weight: 400;
-  font-size: 1rem;
-  text-align: center;
-}
-
 .products {
   padding-bottom: 3rem;
 }
@@ -455,33 +368,6 @@ body {
   }
   .products .photo {
     margin-right: 1rem;
-  }
-}
-@media screen and (min-width: 500px) {
-  .facilities .photos1 {
-    flex-flow: initial;
-  }
-  .facilities .photos1 figure {
-    flex: 1;
-  }
-  .facilities .photos1 figure:nth-child(odd):last-child {
-    flex: 1;
-    width: initial;
-  }
-  .facilities .photos2 figure img {
-    width: auto;
-    height: 160px;
-  }
-  .facilities .photos2 figure:first-child {
-    flex: initial;
-    width: initial;
-  }
-  .facilities .photos2 figure:first-child img {
-    width: auto;
-    height: 160px;
-  }
-  .facilities .movies li {
-    width: 49%;
   }
 }
 

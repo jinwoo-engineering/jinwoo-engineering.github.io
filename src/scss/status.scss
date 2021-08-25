@@ -5,222 +5,96 @@
 @import "_layout.scss";
 @import "_layout-mobile.scss";
 
-
-.section-title{
-	@include section-title;
+.section-title {
+  @include section-title;
 }
-.section-title2{
-	@include section-title2;
+.section-title2 {
+  @include section-title2;
 }
-.section-title3{
-	@include section-title3;
-}
-
-.customers{
-	overflow: hidden;
-	&-list{
-		display: flex;
-		flex-flow: row wrap;
-		margin-right: -2rem;
-	}
-	&-item{
-		min-width: 50%;
-		box-sizing: border-box;
-		padding: 1rem 2rem 1rem 0;
-	}
-	.section-title2{
-		font-weight: 400;
-		&:nth-of-type(2){
-			margin-top: 2rem;
-		}
-	}	
-	.address{
-		margin: 13px 0 10px;
-		line-height: 1.5;
-		font-size: 13px;
-	}
-	.decscription{
-		color: #060221;
-	}
+.section-title3 {
+  @include section-title3;
 }
 
-.facilities{
-	.section-title3{
-		margin-top: 1.5rem;
-	}
-	table{
-		width: 100%;
-	}
-	@include table;
-	// .note{
-	// 	margin-top: 10px;
-	// 	font-size: 12px;
-	// }
-	
-	.photos{
-		display: flex;
-		flex-flow: row wrap;
-		box-sizing: border-box;
-		padding: 1rem 0 2rem;
-	}
-	figure {
-		padding: 0 3px;
-		box-sizing: border-box;
-		img {
-			padding: 0.3rem;
-			width: 100%; 
-			height: auto;
-			box-sizing: border-box;
-			@include box-shadow;
-		}
-	}
-	.photos1 {
-		figure {
-			flex: 1 1 50%;
-			&:nth-child(odd):last-child{
-				flex: none;
-				width: 50%;
-			}
-		}
-	}
-	.photos2 {
-		figure{
-			img{
-				width: auto;
-				height: 160px;
-			}
-			&:first-child {
-				flex: none;
-				width: 100%;
-				img {
-					width: 100%; 
-					height: auto;
-				}
-			}
-		}
-	}
-	figcaption{
-		margin-top: 5px;
-		font-weight: 400;
-		font-size: 14px;
-		text-align: center;
-	}
-	.movies {
-		margin-top: 1rem;
-		li {
-			display: inline-block;
-			width: 100%;
-			box-sizing: border-box;
-			padding: 5px;
-		}
-		iframe{
-			width: 100%;
-		}
-		.__text{
-			font-weight: 400;
-			font-size: 1rem;
-			text-align: center;
-		}
-	}
+.customers {
+  overflow: hidden;
+  &-list {
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: -2rem;
+  }
+  &-item {
+    min-width: 50%;
+    box-sizing: border-box;
+    padding: 1rem 2rem 1rem 0;
+  }
+  .section-title2 {
+    font-weight: 400;
+    &:nth-of-type(2) {
+      margin-top: 2rem;
+    }
+  }
+  .address {
+    margin: 13px 0 10px;
+    line-height: 1.5;
+    font-size: 13px;
+  }
+  .decscription {
+    color: #060221;
+  }
 }
 
-
-
-
-.products{
-	padding-bottom: 3rem;
-	&-list{
-		display: flex;
-		flex-flow: row wrap;
-		// margin-right: -2rem;
-	}
-	&-item{
-		min-width: 50%;
-		box-sizing: border-box;
-		padding: 1rem 2rem 1rem 0;
-		&:first-child{
-			width: 100%;
-		}
-	}
-	.description{
-		color: #060221;
-	}
-	.photos{
-		margin-top: 10px;
-	}
-	.photo {
-		display: inline-block;
-		@include box-shadow;
-		padding: 0.5rem;
-		margin-right: 1rem;
-	}
-	.note{
-		color: #060221;
-	}
+.products {
+  padding-bottom: 3rem;
+  &-list {
+    display: flex;
+    flex-flow: row wrap;
+    // margin-right: -2rem;
+  }
+  &-item {
+    min-width: 50%;
+    box-sizing: border-box;
+    padding: 1rem 2rem 1rem 0;
+    &:first-child {
+      width: 100%;
+    }
+  }
+  .description {
+    color: #060221;
+  }
+  .photos {
+    margin-top: 10px;
+  }
+  .photo {
+    display: inline-block;
+    @include box-shadow;
+    padding: 0.5rem;
+    margin-right: 1rem;
+  }
+  .note {
+    color: #060221;
+  }
 }
 
 @media screen and (max-width: $mobile-width),
-  screen and (max-width: $mobile-width2) 
-  			and (max-height: $mobile-height) 
-  			and (orientation: landscape) {
-  	.customers{
-  		&-list{
-	  		display: block;
-			margin-right: 0;
-		}
-		&-item{
-			padding-right: 0;
-		}
-  	}
-  	.products{
-  		&-list{
-  			display: block;
-  		}
-  		&-item{
-			margin-right: 0;
-		}
-		.photo{
-			margin-right: 1rem;
-		}
-	}
-}
-
-
-@media screen and (min-width: 500px) {
-	.facilities{
-		.photos {
-		}
-		.photos1 {
-			flex-flow: initial;
-			figure{
-				flex: 1;
-				&:nth-child(odd):last-child{
-					flex: 1;
-					width: initial;
-				}
-			}
-		}
-		.photos2 {
-			figure{
-				img{
-					width: auto;
-					height: 160px;
-				}
-				&:first-child {
-					flex: initial;
-					width: initial;
-					img {
-						width: auto;
-					height: 160px;
-					}
-				}
-			}
-		}
-		.movies {
-			li {
-				width: 49%;
-			}
-		}
-	}
-	
+  screen and (max-width: $mobile-width2) and (max-height: $mobile-height) and (orientation: landscape) {
+  .customers {
+    &-list {
+      display: block;
+      margin-right: 0;
+    }
+    &-item {
+      padding-right: 0;
+    }
+  }
+  .products {
+    &-list {
+      display: block;
+    }
+    &-item {
+      margin-right: 0;
+    }
+    .photo {
+      margin-right: 1rem;
+    }
+  }
 }

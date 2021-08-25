@@ -25,6 +25,9 @@
                                 <a href="./status.html" class="__link">회사현황</a>
                             </li>
                             <li class="nav-item">
+                                <a href="./equipment.html" class="__link">생산설비</a>
+                            </li>
+                            <li class="nav-item">
                                 <a href="./business.html" class="__link">사업소개</a>
                             </li>
                             <li class="nav-item">
