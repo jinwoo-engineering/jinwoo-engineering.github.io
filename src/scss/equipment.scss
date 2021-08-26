@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 @import "_reset.scss";
+@import "_constants.scss";
 @import "_mixins.scss";
 @import "_layout.scss";
 @import "_layout-mobile.scss";
@@ -8,9 +9,9 @@
 .section-title {
     @include section-title;
 }
-.section-title2 {
-    @include section-title2;
-}
+// .section-title2 {
+//     @include section-title2;
+// }
 .section-title3 {
     @include section-title3;
 }
@@ -23,19 +24,9 @@
         width: 100%;
     }
     @include table;
-    // .note{
-    // 	margin-top: 10px;
-    // 	font-size: 12px;
-    // }
 }
 
 .equipGallery {
-    .photos {
-        display: flex;
-        flex-flow: row wrap;
-        box-sizing: border-box;
-        padding: 1rem 0 2rem;
-    }
     figure {
         position: relative;
         padding: 0 3px;
@@ -74,86 +65,96 @@
     }
 
     .photos1 {
+        // display: flex;
+        // flex-flow: row wrap;
+        box-sizing: border-box;
+        padding: 1rem 0 2rem;
+        &:after{
+            @include float-clear;
+        }
         figure {
-            flex: 1 1 50%;
-            &:nth-child(odd):last-child {
-                flex: none;
-                width: 50%;
-            }
+            float: left;
+            width: 50%;
         }
     }
     .photos2 {
+        // display: flex;
+        // flex-flow: row wrap;
+        box-sizing: border-box;
+        padding: 1rem 0 2rem;
+        &:after{
+            @include float-clear;
+        }
         figure {
+            float: left;
             img {
                 width: auto;
                 height: 160px;
             }
-            &:first-child {
-                flex: none;
-                width: 100%;
-                img {
-                    width: 100%;
-                    height: auto;
-                }
-            }
+            // &:first-child {
+            //     flex: none;
+            //     width: 100%;
+            //     img {
+            //         width: 100%;
+            //         height: auto;
+            //     }
+            // }
         }
     }
 }
 
-.equipMovies {
-    .movies {
+.videos {
+    &-list {
         margin-top: 1rem;
-        li {
-            display: inline-block;
-            width: 100%;
-            box-sizing: border-box;
-            padding: 5px;
+        &:after{
+            @include float-clear;
         }
-        iframe {
-            width: 100%;
+    }
+    .video {
+        float: left;
+        width: 50%;
+        padding-bottom: 1rem;
+        // display: inline-block;
+        // width: 49%;
+        // box-sizing: border-box;
+        // padding: 5px;
+        .__link {
+            display: block;
+            img{
+                width: 100%;
+                height: auto;
+                padding: 0.3rem;
+                box-sizing: border-box;
+                background-color: #fff;
+                @include box-shadow;
+            }
         }
         .__text {
             font-weight: 400;
-            font-size: 1rem;
+            font-size: 14px;
             text-align: center;
+            @include section-text-color;
         }
     }
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: $device-tablet) {
     .equipGallery {
         .photos1 {
-            flex-flow: initial;
+            // flex-flow: initial;
             figure {
-                flex: 1;
-                &:nth-child(odd):last-child {
-                    flex: 1;
-                    width: initial;
-                }
-            }
-        }
-        .photos2 {
-            figure {
-                img {
-                    width: auto;
-                    height: 160px;
-                }
-                &:first-child {
-                    flex: initial;
-                    width: initial;
-                    img {
-                        width: auto;
-                        height: 160px;
-                    }
-                }
+                width: 25%;
+                // flex: 1;
+                // &:nth-child(odd):last-child {
+                //     flex: 1;
+                //     width: initial;
+                // }
             }
         }
     }
-    .equipMovies {
-        .movies {
-            li {
-                width: 49%;
-            }
+    .videos {
+        .video{
+            width: 24%;
         }
     }
 }

@@ -1,7 +1,7 @@
 (function (window) {
     'use strict'
 
-    function Template () {
+    function Template() {
         this.template = {
             gnb: function () {
                 return `
@@ -15,9 +15,6 @@
                     </button>
                     <nav class="nav">
                         <ul class="nav-list">
-                            <li class="nav-item">
-                                <a href="./home.html" class="__link">HOME</a>
-                            </li>
                             <li class="nav-item">
                                 <a href="./about.html" class="__link">회사소개</a>
                             </li>

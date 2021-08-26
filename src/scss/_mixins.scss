@@ -1,3 +1,9 @@
+@mixin float-clear{
+    content: '';
+    display: table;
+    clear: both;
+}
+
 @mixin contents-wrap {
     max-width: 1190px;
     margin: 0 auto;
