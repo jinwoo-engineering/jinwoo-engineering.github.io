@@ -358,79 +358,93 @@ body {
   display: block;
 }
 .equipGallery figcaption {
-  margin-top: 5px;
-  font-weight: 400;
-  font-size: 14px;
-  text-align: center;
-}
-.equipGallery .photos1 {
-  box-sizing: border-box;
-  padding: 1rem 0 2rem;
-}
-.equipGallery .photos1:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.equipGallery .photos1 figure {
-  float: left;
-  width: 50%;
-}
-.equipGallery .photos2 {
-  box-sizing: border-box;
-  padding: 1rem 0 2rem;
-}
-.equipGallery .photos2:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.equipGallery .photos2 figure {
-  float: left;
-}
-.equipGallery .photos2 figure img {
-  width: auto;
-  height: 160px;
-}
-
-.videos-list {
-  margin-top: 1rem;
-}
-.videos-list:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.videos .video {
-  float: left;
-  width: 50%;
-  padding-bottom: 1rem;
-}
-.videos .video .__link {
-  display: block;
-}
-.videos .video .__link img {
-  width: 100%;
-  height: auto;
-  padding: 0.3rem;
-  box-sizing: border-box;
-  background-color: #fff;
-  box-shadow: 0 50px 75px rgba(0, 0, 0, 0.1);
-}
-.videos .video .__text {
-  font-weight: 400;
+  margin-top: 2px;
+  font-weight: 500;
   font-size: 14px;
   text-align: center;
   color: rgba(0, 0, 0, 0.6);
 }
+@media screen and (min-width: 760px) {
+  .equipGallery figcaption {
+    font-size: 1rem;
+  }
+}
+.equipGallery-photos1 {
+  box-sizing: border-box;
+  padding: 1rem 0 2rem;
+}
+.equipGallery-photos1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.equipGallery-photos1 figure {
+  float: left;
+  width: 50%;
+}
+.equipGallery-photos2 {
+  box-sizing: border-box;
+  padding: 1rem 0 2rem;
+}
+.equipGallery-photos2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.equipGallery-photos2 figure {
+  float: left;
+}
+.equipGallery-photos2 figure img {
+  width: auto;
+  height: 160px;
+}
+
+.equipVideos-list {
+  margin-top: 1rem;
+}
+.equipVideos-list:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.equipVideos-card {
+  float: left;
+  width: 50%;
+  padding-bottom: 1rem;
+}
+.equipVideos-card .__link {
+  display: block;
+}
+.equipVideos-card .__link:hover {
+  text-decoration: underline;
+}
+.equipVideos-card .__link img {
+  width: 100%;
+  height: auto;
+  padding: 0.2rem;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.equipVideos-card .__text {
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+  letter-spacing: -1px;
+}
+@media screen and (min-width: 760px) {
+  .equipVideos-card .__text {
+    font-size: 1rem;
+  }
+}
 
 @media screen and (min-width: 760px) {
-  .equipGallery .photos1 figure {
+  .equipGallery-photos1 figure {
     width: 25%;
   }
 
-  .videos .video {
-    width: 24%;
+  .equipVideos-card {
+    width: 25%;
   }
 }
 
