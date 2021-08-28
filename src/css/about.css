@@ -292,15 +292,18 @@ body {
 
 .summary dl {
   display: flex;
+  flex-direction: column;
   padding: 10px 0;
   border-bottom: 1px dashed #eee;
 }
 .summary dt {
   flex: none;
   width: 30%;
+  font-size: 1rem;
 }
 .summary dd {
   margin-left: 6px;
+  margin-left: 0;
   font-weight: 300;
   color: #060221;
 }
@@ -316,7 +319,7 @@ body {
 }
 
 .map {
-  display: flex;
+  display: block;
 }
 .map-image {
   flex: 1;
@@ -328,7 +331,8 @@ body {
 }
 .map-detail {
   flex: 1;
-  padding-left: 2rem;
+  margin-top: 1rem;
+  padding-left: 0;
 }
 .map-detail .section-title2 {
   float: left;
@@ -353,31 +357,23 @@ body {
   min-width: 80px;
 }
 
-@media screen and (max-width: 767px), screen and (max-width: 850px) and (max-height: 500px) and (orientation: landscape) {
-  .header {
-    background: #fff;
-  }
-  .header-titles {
-    background-color: #a9eae8;
-  }
-
+@media screen and (min-width: 760px) {
   .summary dl {
-    flex-direction: column;
-    padding: 10px 0;
+    flex-direction: initial;
   }
   .summary dt {
-    font-size: 1rem;
+    font-size: initial;
   }
   .summary dd {
-    margin-left: 0;
+    margin-left: initial;
   }
 
   .map {
-    display: block;
+    display: flex;
   }
   .map-detail {
-    margin-top: 1rem;
-    padding-left: 0;
+    margin-top: initial;
+    padding-left: 2rem;
   }
 }
 
