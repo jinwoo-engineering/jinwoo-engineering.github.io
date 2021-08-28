@@ -371,6 +371,7 @@ body {
 }
 .equipGallery-photos1 {
   box-sizing: border-box;
+  margin-left: -0.3rem;
   padding: 1rem 0 2rem;
 }
 .equipGallery-photos1:after {
@@ -384,6 +385,7 @@ body {
 }
 .equipGallery-photos2 {
   box-sizing: border-box;
+  margin-left: -0.3rem;
   padding: 1rem 0 2rem;
 }
 .equipGallery-photos2:after {
@@ -439,6 +441,15 @@ body {
 }
 
 @media screen and (min-width: 760px) {
+  .equipGallery-photos1 figure {
+    width: 33.333%;
+  }
+
+  .equipVideos-card {
+    width: 33.333%;
+  }
+}
+@media screen and (min-width: 1024px) {
   .equipGallery-photos1 figure {
     width: 25%;
   }

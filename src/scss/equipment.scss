@@ -74,6 +74,7 @@
 
     &-photos1 {
         box-sizing: border-box;
+        margin-left: -0.3rem;
         padding: 1rem 0 2rem;
         &:after {
             @include float-clear;
@@ -85,6 +86,7 @@
     }
     &-photos2 {
         box-sizing: border-box;
+        margin-left: -0.3rem;
         padding: 1rem 0 2rem;
         &:after {
             @include float-clear;
@@ -131,8 +133,21 @@
 }
 
 @media screen and (min-width: $device-tablet) {
-    // .equipStatus {
-    // }
+    .equipGallery {
+        &-photos1 {
+            figure {
+                width: 33.333%;
+            }
+        }
+    }
+    .equipVideos {
+        &-card {
+            width: 33.333%;
+        }
+    }
+}
+
+@media screen and (min-width: $device-pc) {
     .equipGallery {
         &-photos1 {
             figure {

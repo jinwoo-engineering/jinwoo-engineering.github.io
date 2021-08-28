@@ -4,9 +4,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"npm run watch:css\" \"npm run watch:js\" ",
     "watch:css": "npx sass --watch --style=expanded src/scss:src/css",
-    "watch:js": "npx babel ./src/js --watch --out-dir ./src/js --out-file-extension .lower.js",
+    "watch:js": "npx babel ./src/js --watch --out-dir ./src/js",
     "start--public": "concurrently \"npm run watch:html--public\" \"npm run watch:css--public\" \"npm run watch:js--public\"",
     "watch:html--public": "npx nodemon -e html -w ./src -x \"npm run minify:html\"",
     "watch:css--public": "npx sass --watch --style=compressed src/scss:public/css",
