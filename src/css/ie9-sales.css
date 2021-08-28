@@ -1,18 +1,44 @@
-/* Error: Undefined mixin.
- *    ,
- * 14 |         @include float-clear;
- *    |         ^^^^^^^^^^^^^^^^^^^^
- *    '
- *   src\scss\_ie9-layout.scss 14:9  @import
- *   src\scss\ie9-sales.scss 4:9     root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 14 \2502          @include float-clear;\d\a    \2502          ^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   src\\scss\\_ie9-layout.scss 14:9  @import\a   src\\scss\\ie9-sales.scss 4:9     root stylesheet";
+.gnb .brand {
+  float: left;
+  margin-top: 9px;
 }
+.gnb .nav {
+  float: right;
+}
+.gnb .nav-item {
+  display: inline-block;
+}
+.gnb:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.footer-inner {
+  display: table;
+  width: 100%;
+}
+.footer .info {
+  display: table-cell;
+}
+.footer .copyright {
+  display: table-cell;
+}
+
+.expected:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.expected-media {
+  float: left;
+}
+.expected-media img {
+  width: auto;
+}
+.expected-data {
+  float: left;
+  width: 50%;
+}
+
+/*# sourceMappingURL=ie9-sales.css.map */
