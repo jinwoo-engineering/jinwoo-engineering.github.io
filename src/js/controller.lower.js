@@ -1,1 +1,0 @@
-"use strict";(function(a){'use strict';function b(a){this.view=a}b.prototype.setView=function(){this.view.render("showComponents"),this.view.bind("windowScroll"),this.view.bind("gnbsButtonClick")},a.app=a.app||{},a.app.Controller=b})(window);
