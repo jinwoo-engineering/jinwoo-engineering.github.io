@@ -1,89 +1,84 @@
 @charset "UTF-8";
 
 @import "_reset.scss";
+@import "_constants.scss";
 @import "_mixins.scss";
 @import "_layout.scss";
 @import "_layout-mobile.scss";
 
-
-.section-title{
-	@include section-title;
+.section-title {
+    @include section-title;
 }
-.section-title2{
-	@include section-title2;
-}
-
-.process{
-	&-list{
-		display: flex;
-		flex-flow: row wrap;
-	}
-	&-item{
-		min-width: 33.33333%;
-		box-sizing: border-box;
-		padding: 1rem 0.5rem;
-		text-align: center;
-
-		display: flex;
-		align-items: center;
-		.__text{
-			flex: 2;
-			max-width: 60%;
-			padding: 0.5rem 1rem;
-			border-radius: 50%;
-			background: #cde5be;
-			color: #2b3525;
-			@include box-shadow;
-
-		}
-		.__arrow{
-			flex: 1;
-			margin-left: 10px;
-		}
-	}
+.section-title2 {
+    @include section-title2;
 }
 
-.business{
-	&-image{
-		margin-top: 10px;
-		text-align: center;
-	}
+.process {
+    &-list {
+        display: flex;
+        flex-direction: column;
+    }
+    &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        box-sizing: border-box;
+        padding: 10px 0;
+        text-align: center;
+
+        .__text {
+            width: 70%;
+            padding: 0.5rem 1rem;
+            border-radius: 50%;
+            background: #cde5be;
+            color: #2b3525;
+            @include box-shadow;
+        }
+        .__arrow {
+            margin: 10px 0 0;
+            transform: rotate(90deg);
+        }
+    }
 }
 
-@media screen and (max-width: $mobile-width),
-  screen and (max-width: $mobile-width2) 
-  			and (max-height: $mobile-height) 
-  			and (orientation: landscape) {
-	.header {
-		background: #fff;
-		&-titles {
-			background-color: #a9eae8;
-		}
-	}
-	.process{
-		&-list{
-		}
-		&-item{
-			width: 100%;
-			display: flex;
-			flex-direction: column;
-			padding: 10px 0;
-			.__text{
-				width: 80%;
-			}
-			.__arrow{
-				margin: 10px 0 0 ;
-				transform: rotate(90deg)
-			}
-		}
-	}
-	.business{
-		&-image{
-			img{
-				width: 100%;
-				height: auto;
-			}
-		}
-	}
+.business {
+    &-image {
+        text-align: center;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
 
+@media screen and (min-width: $device-tablet) {
+    .process {
+        &-list {
+            flex-direction: initial;
+            flex-flow: row wrap;
+        }
+        &-item {
+            flex-direction: row;
+            width: 33.33333%;
+            padding: 1rem 0.5rem;
+            .__text {
+                flex: 2;
+            }
+            .__arrow {
+                flex: 1;
+                margin: 0 0 0 10px;
+                transform: rotate(0deg);
+            }
+        }
+    }
+    .business {
+        &-image {
+            margin-top: 1rem;
+            img {
+                width: auto;
+                height: auto;
+            }
+        }
+    }
 }
