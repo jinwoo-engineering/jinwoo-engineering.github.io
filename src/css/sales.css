@@ -287,7 +287,7 @@ body {
 }
 
 .expected {
-  display: flex;
+  display: block;
 }
 .expected-media {
   flex: 1;
@@ -329,16 +329,9 @@ body {
   text-align: center;
 }
 
-@media screen and (max-width: 767px), screen and (max-width: 850px) and (max-height: 500px) and (orientation: landscape) {
-  .header {
-    background: #fff;
-  }
-  .header-titles {
-    background-color: #a9eae8;
-  }
-
+@media screen and (min-width: 760px) {
   .expected {
-    display: block;
+    display: flex;
   }
 }
 

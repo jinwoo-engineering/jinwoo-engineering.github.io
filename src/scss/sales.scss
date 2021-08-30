@@ -1,61 +1,50 @@
 @charset "UTF-8";
 
 @import "_reset.scss";
+@import "_constants.scss";
 @import "_mixins.scss";
 @import "_layout.scss";
 @import "_layout-mobile.scss";
 
-
-.section-title{
-	@include section-title;
+.section-title {
+    @include section-title;
 }
 
-.section-title2{
-	@include section-title2;
-	margin-top: 1rem;
+.section-title2 {
+    @include section-title2;
+    margin-top: 1rem;
 }
 
-.expected{
-	display: flex;
-	&-media{
-		flex: 1;
-		img{
-			width: 100%;
-			height: auto;
-		}
-	}
-	&-data{
-		flex: 1.5;
-	}
-	&-units{
-		text-align: right;
-	}
-	&-table{
-		width: 100%;
-		@include table;
-	}
+.expected {
+    display: block;
+    &-media {
+        flex: 1;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    &-data {
+        flex: 1.5;
+    }
+    &-units {
+        text-align: right;
+    }
+    &-table {
+        width: 100%;
+        @include table;
+    }
 }
 
-.outlook{
-
+.outlook {
 }
 
-.strategy{
-
+.strategy {
 }
-
-@media screen and (max-width: $mobile-width),
-  screen and (max-width: $mobile-width2) 
-  			and (max-height: $mobile-height) 
-  			and (orientation: landscape) {
-	.header {
-		background: #fff;
-		&-titles {
-			background-color: #a9eae8;
-		}
-	}
-	.expected{
-		display: block;
-	}
-
+@media screen and (min-width: $device-tablet) {
+    .expected {
+        display: flex;
+    }
+}
+@media screen and (min-width: $device-pc) {
 }
