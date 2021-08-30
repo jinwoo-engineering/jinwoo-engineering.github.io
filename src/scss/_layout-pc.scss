@@ -1,0 +1,63 @@
+$content-space: 1.8rem;
+
+@media screen and (min-width: $device-tablet) {
+    .header {
+        padding: 1rem $content-space;
+        background: #a9eae8;
+        &-titles {
+            background-color: transparent;
+        }
+    }
+    .gnb {
+        display: flex;
+        .brand {
+            padding: 0;
+        }
+        .toggle-button {
+            display: none;
+        }
+        .nav {
+            display: block;
+            position: static;
+            width: auto;
+            margin-left: auto;
+            background-color: transparent;
+        }
+        .nav-list {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        .nav-item {
+            border-top: none;
+            .__link {
+                padding: 10px 20px;
+                color: #333;
+            }
+        }
+    }
+    .contents {
+        padding: $content-space $content-space 3rem;
+    }
+    .section {
+        margin-top: 4rem;
+    }
+    .footer {
+        padding: $content-space;
+        &-inner {
+            flex-direction: row;
+        }
+        .copyright {
+            margin-left: auto;
+            text-align: right;
+        }
+    }
+    .gnbFix {
+        padding: 1rem $content-space;
+        &-inner {
+            display: flex;
+        }
+    }
+}
+@media screen and (min-width: $device-pc) {
+}
