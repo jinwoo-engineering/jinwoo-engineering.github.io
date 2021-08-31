@@ -26,6 +26,49 @@
     @include section-title3;
 }
 
+.largeActions {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+}
+figure:hover .largeActions {
+    // display: flex;
+}
+.largerButton {
+    @function color1($opacity) {
+        @return rgba(9, 48, 73, $opacity);
+    }
+    @function color2($opacity) {
+        @return rgba(255, 255, 255, $opacity);
+    }
+    height: 40px;
+    box-sizing: border-box;
+    padding: 0 20px;
+    border-radius: 4px;
+    border: solid 1px color1(0.7);
+    background-color: color1(0.8);
+    line-height: 1.5;
+    font-size: 14px;
+    font-weight: 500;
+    color: color2(1);
+    cursor: pointer;
+    &:hover {
+        border-color: color1(0.6);
+        background-color: color1(0.7);
+        color: color2(0.9);
+    }
+    &:active {
+        border-color: color1(0.5);
+        background-color: color1(0.6);
+        color: color2(0.8);
+    }
+}
+
 .equipStatus {
     .section-title3 {
         margin-top: 1.5rem;
@@ -49,24 +92,7 @@
             @include box-shadow;
         }
     }
-    .actions {
-        display: none;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin-top: -15px;
-        text-align: center;
-        button {
-            @include button-a;
-            height: 30px;
-            font-size: 12px;
-        }
-    }
-    figure:hover .actions {
-        display: block;
-    }
+
     figcaption {
         margin-top: 2px;
         @include __cardText;
