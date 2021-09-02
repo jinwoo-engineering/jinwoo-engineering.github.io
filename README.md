@@ -18,3 +18,5 @@ https://jinwoo-engineering.github.io/
 -   아키텍쳐 수정
 -   user agent
 -   하위 브라우저 안내
+-   Change Design or primary color
+-   Refactor data attribute to aria

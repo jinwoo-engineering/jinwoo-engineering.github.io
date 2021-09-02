@@ -9,6 +9,8 @@
         this.view.render('showComponents')
         this.view.bind('windowScroll')
         this.view.bind('gnbsButtonClick')
+        this.view.bind('largerButtonclick')
+        this.view.bind('largeImageCloseButtonClick')
     }
 
     window.app = window.app || {}

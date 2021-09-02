@@ -37,7 +37,7 @@
     justify-content: center;
 }
 figure:hover .largeActions {
-    // display: flex;
+    display: flex;
 }
 .largerButton {
     @function color1($opacity) {
@@ -50,21 +50,21 @@ figure:hover .largeActions {
     box-sizing: border-box;
     padding: 0 20px;
     border-radius: 4px;
-    border: solid 1px color1(0.7);
-    background-color: color1(0.8);
+    border: solid 1px color1(0.9);
+    background-color: color1(0.9);
     line-height: 1.5;
     font-size: 14px;
     font-weight: 500;
     color: color2(1);
     cursor: pointer;
     &:hover {
-        border-color: color1(0.6);
-        background-color: color1(0.7);
+        border-color: color1(0.8);
+        background-color: color1(0.8);
         color: color2(0.9);
     }
     &:active {
-        border-color: color1(0.5);
-        background-color: color1(0.6);
+        border-color: color1(0.7);
+        background-color: color1(0.7);
         color: color2(0.8);
     }
 }
@@ -154,6 +154,61 @@ figure:hover .largeActions {
         .__text {
             @include __cardText;
             letter-spacing: -1px;
+        }
+    }
+}
+
+.largeImage {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    &[aria-hidden="true"] {
+        display: none;
+    }
+    img {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+
+        border-radius: 5px;
+
+        width: 70%;
+        max-width: 500px;
+        height: auto;
+    }
+    .__closeButton {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        cursor: pointer;
+        // border: 1px solid #ddd;
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        &:active {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        .line {
+            position: absolute;
+            top: 48%;
+            left: 21%;
+            display: inline-block;
+            width: 60%;
+            height: 2px;
+            background-color: rgba(255, 255, 255, 0.7);
+            &:first-child {
+                transform: rotate(135deg);
+            }
+            &:last-child {
+                transform: rotate(45deg);
+            }
         }
     }
 }

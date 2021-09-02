@@ -46,6 +46,24 @@
                         })
                 })
             break
+        case 'largerButtonclick':
+            window.$qsa('[data-button="larger"]')
+                .forEach(element => {
+                    element.addEventListener('click', function () {
+                        const cpnt = window.$qs('#largeImage')
+                        cpnt.querySelector('img').src = this.getAttribute('data-src')
+                        cpnt.querySelector('img').alt = this.getAttribute('data-alt')
+                        cpnt.setAttribute('aria-hidden', false)
+                    })
+                })
+            break
+        case 'largeImageCloseButtonClick':
+            window.$qs('#closeLargeImageButton')
+                .addEventListener('click', () => {
+                    window.$qs('#largeImage')
+                        .setAttribute('aria-hidden', true)
+                })
+            break
         }
     }
 
