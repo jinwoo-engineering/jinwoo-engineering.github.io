@@ -35,6 +35,9 @@ body {
   margin: 0;
   background-color: #fff;
 }
+body[data-backdrop=true] {
+  overflow: hidden;
+}
 
 .root {
   display: flex;
@@ -219,6 +222,61 @@ body {
   top: -100%;
 }
 
+.gallery {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.gallery[aria-hidden=true] {
+  display: none;
+}
+.gallery .__photo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  width: 80%;
+  height: auto;
+  border-radius: 5px;
+}
+.gallery .__closeButton {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: transparent;
+}
+.gallery .__closeButton svg {
+  width: 17px;
+  height: 17px;
+  margin-top: 1px;
+  fill: rgba(255, 255, 255, 0.7);
+}
+.gallery .__closeButton:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.gallery .__closeButton:hover svg {
+  fill: rgba(255, 255, 255, 0.8);
+}
+.gallery .__closeButton:active {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.gallery .__closeButton:active svg {
+  fill: rgba(255, 255, 255, 0.9);
+}
+
+@media screen and (min-width: 600px) {
+  .gallery .__photo {
+    width: auto;
+    height: 80%;
+  }
+}
 @media screen and (min-width: 760px) {
   .header {
     padding: 1rem 1.8rem;
@@ -307,12 +365,10 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 figure:hover .largeActions {
   display: flex;
 }
-
-.largerButton {
+.largeActions .largerButton {
   height: 40px;
   box-sizing: border-box;
   padding: 0 20px;
@@ -325,12 +381,12 @@ figure:hover .largeActions {
   color: white;
   cursor: pointer;
 }
-.largerButton:hover {
+.largeActions .largerButton:hover {
   border-color: rgba(9, 48, 73, 0.8);
   background-color: rgba(9, 48, 73, 0.8);
   color: rgba(255, 255, 255, 0.9);
 }
-.largerButton:active {
+.largeActions .largerButton:active {
   border-color: rgba(9, 48, 73, 0.7);
   background-color: rgba(9, 48, 73, 0.7);
   color: rgba(255, 255, 255, 0.8);
@@ -459,58 +515,6 @@ figure:hover .largeActions {
   .equipVideos-card .__text {
     font-size: 1rem;
   }
-}
-
-.largeImage {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.9);
-}
-.largeImage[aria-hidden=true] {
-  display: none;
-}
-.largeImage img {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  border-radius: 5px;
-  width: 70%;
-  max-width: 500px;
-  height: auto;
-}
-.largeImage .__closeButton {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.largeImage .__closeButton:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-.largeImage .__closeButton:active {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-.largeImage .__closeButton .line {
-  position: absolute;
-  top: 48%;
-  left: 21%;
-  display: inline-block;
-  width: 60%;
-  height: 2px;
-  background-color: rgba(255, 255, 255, 0.7);
-}
-.largeImage .__closeButton .line:first-child {
-  transform: rotate(135deg);
-}
-.largeImage .__closeButton .line:last-child {
-  transform: rotate(45deg);
 }
 
 @media screen and (min-width: 760px) {

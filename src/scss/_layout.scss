@@ -8,6 +8,9 @@ body {
     height: 100%;
     margin: 0;
     background-color: #fff;
+    &[data-backdrop="true"] {
+        overflow: hidden;
+    }
 }
 
 .root {
@@ -193,5 +196,65 @@ body {
     }
     &[data-hidden="true"] {
         top: -100%;
+    }
+}
+
+.gallery {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    &[aria-hidden="true"] {
+        display: none;
+    }
+
+    .__photo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 80%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .__closeButton {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        cursor: pointer;
+        background-color: transparent;
+        svg {
+            width: 17px;
+            height: 17px;
+            margin-top: 1px;
+            fill: rgba(255, 255, 255, 0.7);
+        }
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+            svg {
+                fill: rgba(255, 255, 255, 0.8);
+            }
+        }
+        &:active {
+            background-color: rgba(255, 255, 255, 0.2);
+            svg {
+                fill: rgba(255, 255, 255, 0.9);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .gallery {
+        .__photo {
+            width: auto;
+            height: 80%;
+        }
     }
 }

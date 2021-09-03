@@ -14,7 +14,7 @@
 	<!--[if lt IE 10]><link rel="stylesheet" href="./css/ie9-equipment.css"><![endif]-->
 </head>
 
-<body>
+<body data-backdrop="false">
 
 	<div class="root">
 
@@ -247,16 +247,20 @@
 
 		<div id="gnbFix" data-component="gnbFix" data-hidden="true"></div>
 
-
-		<div id="largeImage" class="largeImage" aria-hidden="true">
-			<img src="" width="300" height="400" alt="">
-			<div role="button" 
-				id="closeLargeImageButton"
-				class="__closeButton"
-				aria-label="사진 닫기" >
-				<span class="line"></span>
-				<span class="line"></span>
-			</div>
+		<div id="gallery" class="gallery" aria-hidden="true">
+			<img src="" class="__photo" width="300" height="400" alt="">
+			<button type="button" 
+				id="closeGalleryButton"
+				class="__closeButton" 
+				aria-label="사진 닫기">
+				<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+				viewBox="0 0 22.88 22.88">
+				<path d="M0.324,1.909c-0.429-0.429-0.429-1.143,0-1.587c0.444-0.429,1.143-0.429,1.587,0l9.523,9.539
+					l9.539-9.539c0.429-0.429,1.143-0.429,1.571,0c0.444,0.444,0.444,1.159,0,1.587l-9.523,9.524l9.523,9.539
+					c0.444,0.429,0.444,1.143,0,1.587c-0.429,0.429-1.143,0.429-1.571,0l-9.539-9.539l-9.523,9.539c-0.444,0.429-1.143,0.429-1.587,0
+					c-0.429-0.444-0.429-1.159,0-1.587l9.523-9.539L0.324,1.909z"/>
+				</svg>
+			</button>	
 		</div>
 
 	</div>

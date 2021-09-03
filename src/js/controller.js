@@ -10,7 +10,7 @@
         this.view.bind('windowScroll')
         this.view.bind('gnbsButtonClick')
         this.view.bind('largerButtonclick')
-        this.view.bind('largeImageCloseButtonClick')
+        this.view.bind('galleryCloseButtonClick')
     }
 
     window.app = window.app || {}

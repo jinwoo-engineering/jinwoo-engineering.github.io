@@ -16,6 +16,10 @@
     @include section-title3;
 }
 
+.largeActions {
+    @include largeActions;
+}
+
 .customers {
     overflow: hidden;
     &-list {
@@ -56,6 +60,7 @@
         color: #060221;
     }
     .photos {
+        position: relative;
         margin-top: 10px;
         margin-left: -0.5rem;
     }
@@ -63,7 +68,7 @@
         display: inline-block;
         @include box-shadow;
         padding: 0.5rem;
-        margin-right: 1rem;
+        // margin-right: 1rem;
     }
     .note {
         color: #060221;
@@ -83,8 +88,12 @@
     }
     .products {
         &-list {
-            display: flex;
-            flex-flow: row wrap;
+            &:after {
+                @include float-clear;
+            }
+            li {
+                float: left;
+            }
         }
         &-item {
             &:first-child {

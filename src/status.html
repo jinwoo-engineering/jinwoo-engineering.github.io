@@ -155,9 +155,19 @@
                     </li>
                     <li class="products-item">
                         <h4 class="section-title3">대형 프레임 제작</h4>
-                        <div class="photos">
-                            <span class="__photo"><img src="./media/largeFrame.jpg" width="214" height="214" alt="대형 프레임 제작"></span>
-                        </div>
+                        <figure class="photos">
+                            <span class="__photo">
+                                <img src="./media/largeFrame.jpg" width="214" height="214" alt="대형 프레임 제작">
+                            </span>
+                            <!-- <div class="largeActions">
+								<button type="button" 
+									class="largerButton" 
+									data-button="larger"
+									data-src="./media/largeFrame@1006.jpg"
+									data-alt="대형 프레임 제작"
+									>크게보기</button>
+							</div> -->
+                        </figure>
                     </li>
                 </ul>
                 <p class="note">저온 냉공고는 강력한 냉각 시스템을 통해 영하 -40도 부터  -85도 까지 급속으로 빠르게 냉각됩니다.</p>
@@ -168,6 +178,22 @@
     <footer data-component="footer"></footer>
 
     <div id="gnbFix" data-component="gnbFix" data-hidden="true"></div>
+
+    <div id="gallery" class="gallery" aria-hidden="true">
+        <img src="" class="__photo" width="300" height="400" alt="">
+        <button type="button" 
+            id="closeGalleryButton"
+            class="__closeButton" 
+            aria-label="사진 닫기">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+            viewBox="0 0 22.88 22.88">
+            <path d="M0.324,1.909c-0.429-0.429-0.429-1.143,0-1.587c0.444-0.429,1.143-0.429,1.587,0l9.523,9.539
+                l9.539-9.539c0.429-0.429,1.143-0.429,1.571,0c0.444,0.444,0.444,1.159,0,1.587l-9.523,9.524l9.523,9.539
+                c0.444,0.429,0.444,1.143,0,1.587c-0.429,0.429-1.143,0.429-1.571,0l-9.539-9.539l-9.523,9.539c-0.444,0.429-1.143,0.429-1.587,0
+                c-0.429-0.444-0.429-1.159,0-1.587l9.523-9.539L0.324,1.909z"/>
+            </svg>
+        </button>	
+    </div>
 
 </div>
 

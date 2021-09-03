@@ -50,18 +50,21 @@
             window.$qsa('[data-button="larger"]')
                 .forEach(element => {
                     element.addEventListener('click', function () {
-                        const cpnt = window.$qs('#largeImage')
+                        console.log('event')
+                        const cpnt = window.$qs('#gallery')
                         cpnt.querySelector('img').src = this.getAttribute('data-src')
                         cpnt.querySelector('img').alt = this.getAttribute('data-alt')
                         cpnt.setAttribute('aria-hidden', false)
+                        document.body.setAttribute('data-backdrop', true)
                     })
                 })
             break
-        case 'largeImageCloseButtonClick':
-            window.$qs('#closeLargeImageButton')
+        case 'galleryCloseButtonClick':
+            window.$qs('#closeGalleryButton')
                 .addEventListener('click', () => {
-                    window.$qs('#largeImage')
+                    window.$qs('#gallery')
                         .setAttribute('aria-hidden', true)
+                    document.body.setAttribute('data-backdrop', false)
                 })
             break
         }
