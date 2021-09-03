@@ -47,6 +47,7 @@
                 })
             break
         case 'largerButtonclick':
+            window.$qsa('[data-button="larger"]') &&
             window.$qsa('[data-button="larger"]')
                 .forEach(element => {
                     element.addEventListener('click', function () {
@@ -59,6 +60,7 @@
                 })
             break
         case 'galleryCloseButtonClick':
+            window.$qs('#closeGalleryButton') &&
             window.$qs('#closeGalleryButton')
                 .addEventListener('click', () => {
                     window.$qs('#gallery')
