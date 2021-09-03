@@ -50,7 +50,6 @@
             window.$qsa('[data-button="larger"]')
                 .forEach(element => {
                     element.addEventListener('click', function () {
-                        console.log('event')
                         const cpnt = window.$qs('#gallery')
                         cpnt.querySelector('img').src = this.getAttribute('data-src')
                         cpnt.querySelector('img').alt = this.getAttribute('data-alt')
