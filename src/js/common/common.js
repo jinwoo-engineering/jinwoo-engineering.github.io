@@ -7,7 +7,7 @@ if (NodeList.prototype.hasOwnProperty('forEach') === false) {
 const template = {
     gnb: () => {
         return `
-            <h1 class="brand">진우엔지니어링</h1>
+            <h1 class="brand">진우레이저</h1>
             <button type="button" class="toggle-button">
                 <span class="bars">
                     <span class="__bar"></span>
