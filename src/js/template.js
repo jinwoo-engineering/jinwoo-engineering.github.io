@@ -42,7 +42,7 @@
                             <p class="tel">FAX : <a href="tel: 031-858-2429">031-858-2429</a></p>
                             <p class="email">EMAIL : <a href="mailto:jinwoo43705@naver.com">jinwoo43705@naver.com</a></p>
                         </div>
-                        <div class="copyright">Copyright © JINWOO ENGINEERING. All rights reserved.</div>
+                        <div class="copyright">Copyright © JinwooLaser. All rights reserved.</div>
                     </div>`
             },
             gnbFix: () => `<div class="gnbFix-inner">${this.template.gnb()}</div>`
