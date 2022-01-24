@@ -86,6 +86,20 @@
             }
         }
     }
+    &-photos3 {
+        box-sizing: border-box;
+        margin-left: -0.3rem;
+        padding: 1rem 0 2rem;
+        &:after {
+            @include float-clear;
+        }
+        figure {
+            float: left;
+            img {
+                width: 150px;
+            }
+        }
+    }
 }
 
 .equipVideos {

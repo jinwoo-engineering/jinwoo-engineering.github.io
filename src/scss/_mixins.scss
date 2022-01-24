@@ -13,7 +13,7 @@
     font-size: 1rem;
 }
 @mixin section-text-color {
-    color: rgba(0, 0, 0, 0.6);
+    color: #111;
     // color: #828282;
 }
 @mixin section-text-color2 {
@@ -22,19 +22,18 @@
 @mixin section-text-weight {
     font-weight: 300;
 }
-@mixin section-text-focus-color {
-    color: #060221;
-}
-@mixin section-text {
-    @include section-text-size;
-    @include section-text-color;
-    @include section-text-weight;
-    line-height: 1.8;
-}
-@mixin section-text-focus {
-    @include section-text-weight;
-    @include section-text-focus-color;
-}
+// @mixin section-text-focus-weight {
+//     font-weight: 400;
+// }
+// @mixin section-text-focus-color {
+//     color: #060221;
+// }
+// @mixin section-text {
+//     @include section-text-size;
+//     @include section-text-color;
+//     @include section-text-weight;
+//     line-height: 1.8;
+// }
 @mixin section-title {
     margin-bottom: 1rem;
     font-size: 1.5rem;

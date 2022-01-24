@@ -147,7 +147,10 @@ body {
 
 .section {
     margin-top: 2rem;
-    @include section-text;
+    @include section-text-size;
+    @include section-text-color;
+    @include section-text-weight;
+    line-height: 1.8;
     &:first-child {
         margin-top: 0;
     }

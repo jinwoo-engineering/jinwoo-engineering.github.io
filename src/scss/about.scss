@@ -16,7 +16,8 @@
 
 .introduce {
     .__focus {
-        @include section-text-focus;
+        font-weight: 400;
+        color: #2d2a42;
     }
 }
 
@@ -35,10 +36,11 @@
     dd {
         margin-left: 6px;
         margin-left: 0;
-        @include section-text-focus;
+        font-weight: 300;
+        color: #060221;
     }
     a {
-        @include section-text-focus-color;
+        color: #060221;
     }
 }
 
@@ -47,7 +49,8 @@
         margin-bottom: 2rem;
     }
     .__focus {
-        color: #0a610a;
+        font-weight: 400;
+        color: #268164;
         // color: #1ba21b;
     }
 }
