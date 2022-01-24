@@ -5,7 +5,7 @@
         this.view = view
     }
 
-    Controller.prototype.setView = function () {
+    Controller.prototype.initial = function () {
         this.view.render('showComponents')
         this.view.bind('windowScroll')
         this.view.bind('gnbsButtonClick')
