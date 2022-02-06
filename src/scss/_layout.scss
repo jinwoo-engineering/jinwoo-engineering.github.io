@@ -58,6 +58,9 @@ body {
         padding: 1.5rem $content-space-mobile;
         font-size: 1.2rem;
         font-weight: 500;
+        a {
+            color: #111;
+        }
     }
     .toggle-button {
         $duration: 0.2s;
