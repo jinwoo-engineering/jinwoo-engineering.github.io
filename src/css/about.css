@@ -369,8 +369,6 @@ body[data-backdrop=true] {
   border-bottom: 1px dashed #eee;
 }
 .summary dt {
-  flex: none;
-  width: 30%;
   font-size: 1rem;
 }
 .summary dd {
@@ -437,6 +435,8 @@ body[data-backdrop=true] {
     flex-direction: initial;
   }
   .summary dt {
+    flex: none;
+    width: 30%;
     font-size: initial;
   }
   .summary dd {

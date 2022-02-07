@@ -29,8 +29,6 @@
         border-bottom: 1px dashed #eee;
     }
     dt {
-        flex: none;
-        width: 30%;
         font-size: 1rem;
     }
     dd {
@@ -105,6 +103,8 @@
             flex-direction: initial;
         }
         dt {
+            flex: none;
+            width: 30%;
             font-size: initial;
         }
         dd {
