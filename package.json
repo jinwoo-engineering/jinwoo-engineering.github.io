@@ -7,7 +7,7 @@
     "css": "npx sass --watch --style=expanded src/scss:src/css",
     "public": "concurrently \"npm run html:public\" \"npm run css:public\" \"npm run js:public\"",
     "html:public": "npx nodemon -e html -w ./src -x \"npm run minify:html\"",
-    "css:public": "npx sass --watch --style=compressed src/scss:public/css",
+    "css:public": "npx sass --watch --style=compressed src/scss:public/css --no-source-map",
     "js:public": "npx babel ./src/js --watch --out-dir ./public/js",
     "minify:html": "npx html-minifier --file-ext html --input-dir ./src --output-dir ./public --collapse-whitespace --collapse-boolean-attributes --remove-comments --remove-empty-attributes  --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --remove-tag-whitespace --sort-attributes --sort-class-name --trim-custom-fragments --minify-css --minify-js",
     "prefixer:css": "npx postcss ./public/css/*.css --use autoprefixer -d ./public/css/",

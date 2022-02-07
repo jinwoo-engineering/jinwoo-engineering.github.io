@@ -65,6 +65,9 @@
             box-sizing: border-box;
             border: 1px solid #ddd;
         }
+        a {
+            display: block;
+        }
     }
     &-detail {
         flex: 1;
@@ -91,6 +94,7 @@
         dd {
             flex: 1;
             min-width: 80px;
+            color: #111;
         }
     }
 }
