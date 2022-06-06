@@ -4,6 +4,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "concurrently \"npm run css\" \"npm run public\"",
     "css": "npx sass --watch --style=expanded src/scss:src/css",
     "public": "concurrently \"npm run html:public\" \"npm run css:public\" \"npm run js:public\"",
     "html:public": "npx nodemon -e html -w ./src -x \"npm run minify:html\"",
