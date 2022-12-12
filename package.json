@@ -4,15 +4,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"npm run css\" \"npm run public\"",
+    "start": "concurrently \"npm run css\" \"npm run docs\"",
     "css": "npx sass --watch --style=expanded src/scss:src/css",
-    "public": "concurrently \"npm run html:public\" \"npm run css:public\" \"npm run js:public\"",
-    "html:public": "npx nodemon -e html -w ./src -x \"npm run minify:html\"",
-    "css:public": "npx sass --watch --style=compressed src/scss:public/css --no-source-map",
-    "js:public": "npx babel ./src/js --watch --out-dir ./public/js",
-    "minify:html": "npx html-minifier --file-ext html --input-dir ./src --output-dir ./public --collapse-whitespace --collapse-boolean-attributes --remove-comments --remove-empty-attributes  --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --remove-tag-whitespace --sort-attributes --sort-class-name --trim-custom-fragments --minify-css --minify-js",
-    "prefixer:css": "npx postcss ./public/css/*.css --use autoprefixer -d ./public/css/",
-    "build:css": "npx postcss ./public/css/*.css --use autoprefixer -d ./build/css/ --no-map --verbose",
+    "docs": "concurrently \"npm run html:docs\" \"npm run css:docs\" \"npm run js:docs\"",
+    "html:docs": "npx nodemon -e html -w ./src -x \"npm run minify:html\"",
+    "css:docs": "npx sass --watch --style=compressed src/scss:docs/css --no-source-map",
+    "js:docs": "npx babel ./src/js --watch --out-dir ./docs/js",
+    "minify:html": "npx html-minifier --file-ext html --input-dir ./src --output-dir ./docs --collapse-whitespace --collapse-boolean-attributes --remove-comments --remove-empty-attributes  --remove-optional-tags --remove-redundant-attributes --remove-script-type-attributes --remove-style-link-type-attributes --remove-tag-whitespace --sort-attributes --sort-class-name --trim-custom-fragments --minify-css --minify-js",
+    "prefixer:css": "npx postcss ./docs/css/*.css --use autoprefixer -d ./docs/css/",
+    "build:css": "npx postcss ./docs/css/*.css --use autoprefixer -d ./build/css/ --no-map --verbose",
     "eslint": "eslint -c .eslintrc.json ./src/js/*.js"
   },
   "repository": {

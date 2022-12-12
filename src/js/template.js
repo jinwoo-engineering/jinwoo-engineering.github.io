@@ -5,7 +5,7 @@
         this.template = {
             gnb: function () {
                 return `
-                    <h1 class="brand"><a href="./about.html">진우레이저(주)</a></h1>
+                    <h1 class="brand"><a href="./index.html">진우레이저(주)</a></h1>
                     <button type="button" class="toggle-button" data-gnb-button title="메뉴">
                         <span class="bars">
                             <span class="__bar"></span>
